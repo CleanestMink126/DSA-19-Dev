@@ -1,0 +1,83 @@
+
+% %%%%% PROBLEM 4 %%%%%
+\item Find the kth smallest elements in the union of two arrays, \texttt{A} and \texttt{B}.
+\item Find the median of two sorted arrays \texttt{A} and \texttt{B}. Justify to an instructor your algorithm's runtime.
+
+\begin{lstlisting}[language=Java]
+// O(log(m+n))
+FIND_KTH(k, A, B, s1, s2) {
+    if (A or B is empty) {
+        return kth element in (B or A) ; // take note of starting indices s1/s2
+    }
+    
+    if (k == 1) {
+        return min of A[s1] and B[s2];
+    }
+    
+    midIndexA = s1 + k/2 - 1;
+    midIndexB = s2 + k/2 - 1;
+    
+    midValueA = A[midIndexA] if within bounds else INF;
+    midValueB = B[midIndexB] if within bounds else INF;
+    
+    if (midValueA < midValueB) {
+        return FIND_KTH(k-k/2, A, B, midIndexA+1, s2);
+    } else {
+        return FIND_KTH(k-k/2, A, B, s1, midIndexB+1);
+    }
+    
+}
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+# O(log(min(m, n)))
+def findMedianSortedArrays(self, A1, A2):
+    """
+    :type nums1: List[int]
+    :type nums2: List[int]
+    :rtype: float
+    """
+    # Make A1 the shorter array
+    if len(A1) > len(A2):
+        temp = A1
+        A1=A2
+        A2=temp
+
+    lo1, hi1, lo2, hi2 = 0, len(A1), 0, len(A2)
+
+    # remove from the top and bottom of the arrays until the
+    # smaller array is length 1 or 2
+    while hi1-lo1>2:
+        m1 = self.median_single_array(A1, lo1, hi1)
+        m2 = self.median_single_array(A2, lo2, hi2)
+        len1 = hi1-lo1
+        if m1 == m2:
+            return m1
+        # eliminate all elements before the median element(s)
+        elim = (len1-1)/2
+        if m1 < m2:
+            lo1 += elim
+            hi2 -= elim
+        else:
+            lo2 += elim
+            hi1 -= elim
+    
+    # we only have to consider the middle 4 elements of the larger
+    # array
+    len2 = hi2-lo2
+    if len2>4:
+        lo2+=(len2-3)/2
+        hi2-=(len2-3)/2
+
+    # Select the median out of the remaining candidates. Worst case
+    # A1 is length 2 and A2 is length 4, so this is fast (O(1)).
+    A3 = A1[lo1:hi1] + A2[lo2:hi2]
+    A3.sort()
+    return self.median_single_array(A3, 0, len(A3))
+
+def median_single_array(self, A, lo, hi):
+    n=hi-lo
+    if not n%2:
+        return (A[n/2+lo] + A[n/2-1+lo])/2.0
+    return A[n/2+lo]
+\end{lstlisting}

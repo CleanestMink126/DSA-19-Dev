@@ -1,0 +1,377 @@
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{\large{\textsc{In-Class 2: Linked Lists, Stacks and Queues}}}
+\date{}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage[a4paper, portrait, margin=0.8in]{geometry}
+
+\usepackage{listings}
+
+
+\newcommand\perm[2][n]{\prescript{#1\mkern-2.5mu}{}P_{#2}}
+\newcommand\comb[2][n]{\prescript{#1\mkern-0.5mu}{}C_{#2}}
+\newcommand*{\field}[1]{\mathbb{#1}}
+
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\newcommand{\Mod}[1]{\ (\text{mod}\ #1)}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{lstlisting}[language=Java]
+Node {
+    int data;
+    Node next;
+}
+
+\end{lstlisting}
+
+\noindent For each of the following problems, assume you are only given a \texttt{Node head} (or two), which is the head of a linked list. Focus on first getting a working solution, and then optimizing to a O(N) time O(1) space.
+
+\begin{enumerate}
+
+\setcounter{enumi}{1}
+
+\item Find the length of a linked list.
+    
+\item Given two linked lists, check if they are equal.
+    
+\item Reverse a linked list. Return the new head node.
+
+\item Find and return the $n^{th}$ node from the end of a linked list (inputting 1 would return the last node. Inputting 2 would return the node before the last node. etc.).
+
+\item Check if a linked list is cyclic (that is, there is no node who's \texttt{next} pointer is \texttt{null}, because a node points to a previous node).
+
+\item Check if a singly linked list is a palindrome. You can modify the linked list.
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{Y-ShapedLinked-List}
+\centering
+\end{figure}
+
+\item Given two singly linked lists, determine if and where they have an intersection point. Return the intersection point node. Return \texttt{null} if there is no intersection. For example, for the above linked list, the function would return the Node whose value is 15.
+
+\end{enumerate}
+
+\noindent Finally, some doubly-linked list problems!
+
+\begin{enumerate}
+
+\begin{lstlisting}[language=Java]
+Node {
+    int data;
+    Node next, prev;
+}
+\end{lstlisting}
+
+\setcounter{enumi}{8}
+
+\item Given a DLL, print the elements in reverse order
+
+\item Check if a DLL is a palindrome.
+
+    
+\end{enumerate}
+
+\subsection*{}
+
+Assumptions:
+
+\begin{itemize}
+  \item All stacks are listed from top to bottom.
+  \item All problems can be solved using O(N) time and O(N) space unless noted otherwise.
+  \item Stacks support: \texttt{push}, \texttt{pop}, \texttt{peek}, and \texttt{isEmpty}. They have no other methods.
+\end{itemize}
+    
+\subsection*{}
+
+\begin{enumerate}
+    
+\item Given an integer n, determine if it is palindromic (12,321 is palindromic, 23 is not) (Hint: Think about how you get the last digit of a number. i.e. 435 $\rightarrow$ 5).
+
+\item Given a stack, return a stack with all the elements in reverse order
+
+\item Given a string of opening and closing parentheses, determine if it is a valid expression. That is, every opening paren has a closing partner eg \texttt{"()(())"} is valid, but \texttt{"()())(()"} is not.
+
+\item How would you implement a queue using two stacks? You don’t have to actually implement it, but either draw it or write an explanation on the board. Explain its operations’ runtimes (enqueue and dequeue). Use amortized analysis to discuss your runtimes. Find an instructor and discuss your solution.
+
+\item Given two integer sequences without duplicates, if the first is the push sequence of a stack, determine if the second is a possible pop sequence of the same stack. Ex: if \texttt{[1, 2, 3, 4, 5]} is a push sequence, \texttt{[4, 5, 3, 2, 1]} is a possible pop sequence (Push 1, 2, 3, 4. Pop 4. Push 5. Pop 5, 3, 2, 1), but \texttt{[4, 3, 5, 1, 2]} is not. Drawing an example stack illustration could be helpful.
+
+\item Given a string of open and close parenthesis, determine the longest substring that contains a valid expression. eg
+\begin{itemize}
+  \item \texttt{"(()))("} would return 4.
+  \item \texttt{"(()()))()"} would return 6.
+  \item \texttt{"))(("} would return 0. 
+\end{itemize}
+If you want an additional challenge, restrict yourself to using only one stack as additional storage.
+
+\item Sort a stack in ascending order (with smallest items on top). The only extra memory you may use is one additional stack to hold items (you cannot use any arrays). Return the sorted stack. O(N\textsuperscript{2}) time.
+
+\item Write a function to solve the Tower of Hanoi puzzle. Your function header should look like: \texttt{solveHanoi(Stack left, Stack middle, Stack right, int n)}, Discs are represented as integers, where smaller ints must be stacked on top of larger ints. \texttt{middle}, and \texttt{right} are empty to start, while \texttt{left} has \texttt{[1, 2, ..., n]} on the stack. Move all the ints over to \texttt{right} using only the four supported \texttt{Stack} operations. Larger ints may never be placed on top of smaller ints. Find an instructor and discuss the runtime complexity of your solution.
+\end{enumerate}
+
+
+\clearpage
+
+\begin{lstlisting}[language=Python]
+def swap(arr, i, j):
+    temp = arr[i]
+    arr[i] = arr[j]
+    arr[j] = temp
+
+# Find either the min or max element's index, starting from start
+def index_find(arr, func, start=0):
+    m = start
+    for i in range(start+1, len(arr)):
+        if func=='min' and arr[i] < arr[m]:
+            m = i
+        if func=='max' and arr[i] > arr[m]:
+            m = i
+    return m
+
+# O(N^2) time
+def min_pairs(arr):
+    f_map = {0: 'min', 1: 'max'}
+    # alternate placing minimum and maximum elements
+    for i in range(len(arr)):
+        swap(arr, i, index_find(arr, f_map[i%2], i))
+    return arr
+
+
+# If you're curious, here's the NlogN time solution
+def min_pairs_faster(arr):
+    arr = sorted(arr) # O(NlogN)
+    for i in range(1, len(arr)/2, 2): # O(N)
+        swap(arr, i, len(arr)-i)
+    return arr
+
+def equal(head1, head2):
+
+    while (head1 is not None) and (head2 is not None):
+        if head1.data != head2.data:
+            return False
+        head1 = head1.next
+        head2 = head2.next
+
+    return (head1 is None and head2 is None)
+
+def reverseList(head):
+    prev = None
+    while head:
+        curr = head
+        head = head.next
+        curr.next = prev
+        prev = curr
+    return prev
+
+def hasCycle(head):
+    slow = head
+    fast = head
+    while fast!=None and fast.next!=None:
+        slow = slow.next
+        fast = fast.next.next
+        if slow is fast:
+            return True
+    return False
+
+def find_nth(head, n):
+    while n > 0 and head is not None:
+        head = head.next
+        n -= 1
+    return head
+    
+def find_nth_from_end(head, n):
+    fast = head
+    slow = head
+    for i in range(n):
+        fast = fast.next
+    while fast is not None:
+        fast = fast.next
+        slow = slow.next
+    return slow
+
+def length(head):
+    l = 0
+    while head is not None:
+        head = head.next
+        l+=1
+    return l
+
+def palindrome(head):
+
+    l = length(head)
+
+    if l <= 1:
+        return True
+
+    left_of_middle = find_nth(head, l/2 - 1)
+    # if linked list has odd number of elements, drop the middle element
+    if (l % 2) == 1:
+        left_of_middle.next = left_of_middle.next.next
+
+    # reverse the back half of the linked list
+    left_of_middle.next = reverseList(left_of_middle.next)
+
+    # seperate the front and back half of the LL into seperate Lists
+    middle = left_of_middle.next
+    left_of_middle.next = None
+
+    # check equality
+    return equal(head, middle)
+
+def intersection(head1, head2):
+    l1 = length(head1)
+    l2 = length(head2)
+    long_list, short_list = head1, head2
+    if l2 > l1:
+        long_list, short_list = head2, head1
+    long_list = find_nth(long_list, abs(l1-l2))
+    while long_list is not None:
+        if long_list == short_list:
+            return long_list
+        long_list = long_list.next
+        short_list = short_list.next
+    return None
+
+def print_rev(head):
+    last_elem = find_nth(length(head) - 1)
+    while last_elem is not None:
+        print last_elem
+        last_elem = last_elem.prev
+
+def palindrome_dll(head):
+    l = length(head)
+    if l <= 1:
+        return True
+    last_elem = find_nth(l - 1)
+    while head is not None:
+        if head != last_elem:
+            return False
+        head = head.next
+        last_elem = last_elem.prev
+    return True
+
+#Start of Stacks and Queues
+
+def merge_ll(head1, head2):
+    # Base cases
+    if head1 is None:
+        return head2
+    if head2 is None:
+        return head1
+
+    # Keep a pointer to the head of the new list
+    new_ll = head1
+
+    # Use the correct head as the first element
+    if head2.data < head1.data:
+        new_ll = head2
+        head2 = head2.next
+    else:
+        head1 = head1.next
+
+    # Iterate until both heads are None, selecting the smaller
+    # element and adding onto the end of the list
+    new_head = new_ll
+    while not (head1 is None and head2 is None):
+        if (head1 is None) or ((head2 is not None) and (head1.data > head2.data)):
+            new_head.next = head2
+            head2 = head2.next
+        else:
+            new_head.next = head1
+            head1 = head1.next
+        new_head = new_head.next
+    return new_ll
+
+def num_palindrome(i):
+    j = i
+    stack = Stack()
+    while j != 0:
+        stack.push(j%10)
+        j/=10
+    while not stack.isEmpty():
+        if stack.pop() != i%10:
+            return False
+        i/=10
+    return True
+
+def reverse(stack):
+    rev = Stack()
+    while not stack.isEmpty():
+        rev.push(stack.pop())
+    return rev
+
+def valid_expr(s):
+    stack = Stack()
+    for c in s:
+        if not stack.isEmpty() and c == ')' and stack.peek() == '(':
+            stack.pop()
+        else:
+            stack.push(c)
+    return stack.isEmpty()
+
+def is_pop_sequence(s1, s2):
+    s3 = Stack()
+    while not s1.isEmpty():
+        s3.push(s1.pop())
+        while not s3.isEmpty() and s3.peek() == s2.peek():
+            s3.pop()
+            s2.pop()
+    return s3.isEmpty()
+
+def sorted_stack_one_stack(stack):
+    sorted_stack = Stack()
+    while not stack.isEmpty():
+        var = stack.pop()
+        while not sorted_stack.isEmpty() and sorted_stack.peek() < var:
+            stack.push(sorted_stack.pop())
+        sorted_stack.push(var)
+    return sorted_stack
+
+def longest_valid_substring(s):
+    stack = Stack()
+    for i, c in enumerate(s):
+        if not stack.isEmpty() and c == ')' and s[stack.peek()] == '(':
+            stack.pop()
+        else:
+            stack.push(i)
+    end_valid = len(s)
+    start_valid = len(s)
+    longest = 0
+
+    for i in range(len(s) - 1, -1, -1):
+        if not stack.isEmpty() and stack.peek() == i:
+            end_valid = i
+            stack.pop()
+        else:
+            start_valid = i
+            if end_valid - start_valid > longest:
+                longest = end_valid - start_valid
+
+    return longest
+
+def solveHanoiHelper(fr, to, other, n):
+    if n == 1:
+        to.push(fr.pop())
+    else:
+        solveHanoiHelper(fr, other, to, n-1)
+        solveHanoiHelper(fr, to, other, 1)
+        solveHanoiHelper(other, to, fr, n-1)
+        
+def solveHanoi(left, middle, right, n):
+    solveHanoiHelper(left, right, middle, n)
+
+\end{lstlisting}
+
+\end{document}
