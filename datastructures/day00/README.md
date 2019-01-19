@@ -2,11 +2,14 @@
 
 ## Learning Goals and Student Input
 
-Help us get to know you and provide input to the class by filling out [this](https://goo.gl/forms/iIcRZXaDP6nuO7fD2) Google form.
+Help us get to know you and provide input to the class by filling out [this](https://docs.google.com/forms/d/e/1FAIpQLSfNHz1iT64AsXtsn9uTkECSrktoqjLE9tPuC5p5IeRgb3wWaQ/viewform?usp=sf_link) Google form.
 
-For info on the class that is not represented on the syllabus, refer to our intro slides [here](https://drive.google.com/open?id=14W94RU1IpB8Sfvl7VP9Px4VlwRQ7Nl0Vg7PxyvgXs-Y).
+For info on the class that is not represented on the syllabus, refer to our intro slides [here](https://docs.google.com/presentation/d/13ju6YX6qzHLha4AQ_oYGW96vx-7IHTSU9Sm7tPHKKtE/edit?usp=sharing).
 
 ## Getting Set
+All these instructions were executed on an Ubuntu 16.04 and 18.04 systems, so if you do not have an ubuntu partition we recommend you install one. You can find instructions [here](https://www.tecmint.com/install-ubuntu-16-04-alongside-with-windows-10-or-8-in-dual-boot/) (or one of your friends probably knows how to do it also).
+
+ The aim of this assignments is that you can pull our files off git and run our test cases. So if you can accomplish this another way, that's fine but we won't be able to help you as effectively.
 
 ### Git
 
