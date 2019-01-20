@@ -7,7 +7,7 @@ Help us get to know you and provide input to the class by filling out [this](htt
 For info on the class that is not represented on the syllabus, refer to our intro slides [here](https://docs.google.com/presentation/d/13ju6YX6qzHLha4AQ_oYGW96vx-7IHTSU9Sm7tPHKKtE/edit?usp=sharing).
 
 ## Getting Set
-All these instructions were executed on an Ubuntu 16.04 and 18.04 systems, so if you do not have an ubuntu partition we recommend you install one. You can find instructions [here](https://www.tecmint.com/install-ubuntu-16-04-alongside-with-windows-10-or-8-in-dual-boot/) (or one of your friends probably knows how to do it also).
+All these instructions were executed on an Ubuntu 16.04 and 18.04 systems, so if you do not have an ubuntu partition we recommend you install one. You can find instructions [here](https://linoxide.com/distros/install-ubuntu-18-04-dual-boot-windows-10/) (or one of your friends probably knows how to do it also).
 
  The aim of this assignments is that you can pull our files off git and run our test cases. So if you can accomplish this another way, that's fine but we won't be able to help you as effectively.
 
@@ -28,24 +28,18 @@ Then:
 
 **Optional** Complete **at least 10 levels** of [this](http://learngitbranching.js.org/) Git tutorial.
 
-### Java 9
+### Java 11
 
 Run the following commands:
 
 ```
-sudo add-apt-repository ppa:webupd8team/java
+sudo add-apt-repository ppa:linuxuprising/java
 sudo apt-get update
-sudo apt-get install oracle-java9-installer
-sudo apt-get install oracle-java9-set-default
+sudo apt-get install oracle-java11-installer
+sudo apt-get install oracle-java11-set-default
 ```
 
-Run `java -version` and ensure your output matches the following:
-
-```
-java version "9.0.4"
-Java(TM) SE Runtime Environment (build 9.0.4+11)
-Java HotSpot(TM) 64-Bit Server VM (build 9.0.4+11, mixed mode)
-```
+Run `java -version` and ensure you have correctly installed Java 11.
 
 ### Installing IntelliJ
 
@@ -73,9 +67,12 @@ Set up IntelliJ according to your preferences!
 
 ### If you have errors
 
-- If the `.java` files' icons are a red J instead of a blue C, right click on the `src/` folder and click on `Mark Directory As > Sources Root`
 - If you have unrecognized imports, right click on the `lib/` folder and click on `Add as Library`
-- If you see a yellow bar at the top, click on `Setup SDK/JDK` and choose `Java 1.9`
+- If you see a yellow bar at the top, click on `Setup SDK [this](https://docs.google.com/forms/d/e/1FAIpQLSfNHz1iT64AsXtsn9uTkECSrktoqjLE9tPuC5p5IeRgb3wWaQ/viewform?usp=sf_link) Google form to provide input and learning goals (also linked at the top of this README)
+- [ ] Git is installed.
+- [ ] I've forked the DSA-19 repository using [these](./GitSetup.md)/JDK` and choose `Java 11`
+- If you get errors when importing source files, you may have to disable some android features. This can be done on the main screen under `configure` or if there is a yellow exclamation mark in the bottom right, click on that and follow the prompts
+- If you already had an older IntelliJ IDEA installed you should upgrade to the newer one
 - If you get the error
 
 > Cannot start compilation: the output path is not specified for module "day00".
@@ -85,12 +82,12 @@ Click OK. A new window should open. IntelliJ needs you to specify a place for it
 
 # Assignment Checklist
 
-- [ ] I've filled out [this](https://goo.gl/forms/iIcRZXaDP6nuO7fD2) Google form to provide input and learning goals (also linked at the top of this README)
+- [ ] I've filled out [this](https://docs.google.com/forms/d/e/1FAIpQLSfNHz1iT64AsXtsn9uTkECSrktoqjLE9tPuC5p5IeRgb3wWaQ/viewform?usp=sf_link) Google form to provide input and learning goals (also linked at the top of this README)
 - [ ] Git is installed.
-- [ ] I've forked the DSA-18 repository using [these](./GitSetup.md) instructions
-- [ ] I've added the DSA-18 repository as an upstream remote
+- [ ] I've forked the DSA-19 repository using [these](./GitSetup.md) instructions
+- [ ] I've added the DSA-19 repository as an upstream remote
 - [ ] IntelliJ is installed and I've run `HelloWorld.java`
 - [ ] **Optional** I've familiarized myself with the debugger.
 - [ ] **Optional** I've completed 10 levels of the [Git tutorial](http://learngitbranching.js.org/)
-- [ ] I've joined [the DSA channel](https://olin.slack.com/messages/dsa-18) `#dsa-18` on Slack.
-- [ ] I've filled out [this](https://goo.gl/forms/epFStUdhHJpqvJ0h2) Google form regarding getting set.
+- [ ] I've joined [the DSA channel](https://olin.slack.com/messages/dsa-19) `#dsa-19` on Slack.
+- [ ] I've filled out [this](https://goo.gl/forms/epFStUdhHJpqvJ0h2https://docs.google.com/forms/d/e/1FAIpQLSeCqQlQbDWQcAGIcgvcJwXU6TzqCo7rUNqajY5OX8iQ_djlXQ/viewform?usp=sf_link)
