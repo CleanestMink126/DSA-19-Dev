@@ -5,7 +5,7 @@
 - Understand memory allocation of linked lists
 - Understand the need and implementation of pointer based data structures
 - Be able to analyze time complexities of linked lists
-- Understand when to use LinkedList versus ArrayList
+- Understand when to use a LinkedList versus an ArrayList
 - Understand the difference between a stack and a queue
 - Identify problems where stacks or queues can contribute to an effective solution.
 - Implement a stack and a queue that uses `O(n)` space and has `O(1)` per-operation time complexity.
@@ -16,7 +16,7 @@
 
 - Our lecture notes on Linked Lists and Stacks/Queues are [here](https://drive.google.com/open?id=19wmaQ2eLntO9mXKmJzc_b7luxj_7d603v0GXnZc_P18).
 
-- Our slides on [LLs](https://docs.google.com/presentation/d/1_5Uz06Yw2P-CdXoP-j_D_RIVlP_y89wv7xjHdx4vzZ8/edit?usp=sharing) and [S+Q](https://docs.google.com/presentation/d/1EBnTBGXLrpecftsyOScBp8OPW4bcv5hdMZol789w33o/edit?usp=sharing)s.
+- Our slides on [LLs](https://docs.google.com/presentation/d/1_5Uz06Yw2P-CdXoP-j_D_RIVlP_y89wv7xjHdx4vzZ8/edit?usp=sharing) and [S+Qs](https://docs.google.com/presentation/d/1EBnTBGXLrpecftsyOScBp8OPW4bcv5hdMZol789w33o/edit?usp=sharing).
 
 - Notes from UC Berkeley on [Linked Lists](https://drive.google.com/open?id=1czCHlwIhvMl-KkZon1hTiA6relpjfxkr) and [Stacks/Queues](https://drive.google.com/open?id=1NbfPaMdlokDTGlGVL20vynXECxfe0OfJ)
 
@@ -24,16 +24,16 @@
 
 ## Code
 
-In this homework assignment, you will be implementing your own doubly-linked list and pseudo priority queue. You will also augment the stack to support the `maxElement` operation. With each problem, we will add functionality to our classes to more closely match the real functionality of said data structures.
-
-### Provided for you
+In this homework assignment, you will be implementing your own doubly-linked list in the `MyLinkedList` class and will be augmenting the stack data structure in the `MyStack` class to support the `maxElement` operation. You do not need to modify the code in the `MyQueue` class but you should look it over and understand how it makes use of the built in Java `LinkedList` class to implement the functionality of a queue. Then you will implement a priority queue in the `MyPriorityQueue` class.
+### MyLinkedList
+#### Provided for you
 
 1. The internal `Node` class: its constructor takes in the Chicken, as well as references to the `prev` and `next` nodes.
-1. Some internal variable you probably want to keep track of in the `LinkedList`: the `head` and `tail` `Node`s, and the `size` of the `LinkedList`.
+1. Some internal variables you probably want to keep track of in the `LinkedList`: the `head` and `tail` `Node`s, and the `size` of the `LinkedList`.
 
-### Your code
+#### Your code
 
-Ben would like to start a farm that only contains chickens. He wants your help in creating an `LinkedList` to store these chickens in.
+Prava would like to start a farm that only contains chickens. She wants your help in creating a `LinkedList` to store the chickens.
 
 You will be provided a `Chicken` class that your `MyLinkedList` will *exclusively* store. Each `Chicken` has the following properties:
 ```java
@@ -53,7 +53,7 @@ The tests you will be running on your `MyLinkedList` class will be using this `C
 
     `public void addLast(Chicken c)`
 
-3. Sometimes a chicken will confuse the beginning of the line with the end of the line, and Ben needs to be able to deal with this. Implement `addFirst` that will allow a chicken to be added to the front of the `LinkedList`. Remember to consider the special case where `size` is 0.
+3. Sometimes a chicken will confuse the beginning of the line with the end of the line, and Prava needs to be able to deal with this. Implement `addFirst` that will allow a chicken to be added to the front of the `LinkedList`. Remember to consider the special case where `size` is 0.
 
     `public void addFirst(Chicken c)`
 
@@ -61,7 +61,7 @@ The tests you will be running on your `MyLinkedList` class will be using this `C
 
     `public Chicken get(int index)`
 
-5. Some chickens might leave the farm for various reasons. LinkedLists have special case O(1) deletes off the front and back. Implement `removeFirst` and `removeLast`, and make sure to return them so Ben can "deal" with them. Remember to consider the special cases where `size` is 0 or 1.
+5. Some chickens might leave the farm for various reasons. LinkedLists have special case O(1) deletes off the front and back. Implement `removeFirst` and `removeLast`, and make sure to return them so Prava can "deal" with them. Remember to consider the special cases where `size` is 0 or 1.
 
     `public Chicken removeFirst()`
 
@@ -72,7 +72,7 @@ The tests you will be running on your `MyLinkedList` class will be using this `C
     `public Chicken remove(int index)`
 
 
-Test your DLL by running `MyLinkedListTest.java`. Make all test cases pass.
+Test your DLL by running `MyLinkedListTest.java`. Make sure all test cases pass.
 
 ### Stack
 
@@ -96,7 +96,7 @@ Take the time to think through why each of these are they way they are.
 
 ### Augmentation
 
-* Modify `MyStack` so that it supports: `public Integer maxElement()`. This function returns the largest element currently on the stack. All operations (including `maxElement`) should still be constant `O(1)` time per operation. For example:
+* Modify `MyStack` so that it supports: `public Integer maxElement()`. This function returns the largest element currently on the stack. Keep in mind that the last element you put on the stack will be the first element to be popped off. That said, if the largest element is at the bottom of the stack, it will always be the max element. All operations (including `maxElement`) should still be constant `O(1)` time per operation. For example:
 
 ```java
 MyStack s = new MyStack();
@@ -107,8 +107,8 @@ System.out.println(s.maxElement()); // this should print 5
 s.pop(); // this pops the 5 off the stack
 System.out.println(s.maxElement()); // this should print 4, since it is the largest remaining element on the stack
 ```
-
-* Write a new class `MyPriorityQueue`, which supports `enqueue` and `dequeueMax`. This queue's `dequeueMax` function dequeues the largest element on the queue, rather than the element at the front of the queue. In this case, you will only be able to do one of the operations in O(1) time. The other operation will be O(N). For example:
+Keep track of the maximum elements in a second linked list as shown in this example: ![](stack_visual.png)
+* Write a new class `MyPriorityQueue`, which supports `enqueue` and `dequeueMax`. This queue's `dequeueMax` function dequeues the largest element on the queue, rather than the element at the front of the queue. In this case, you will only be able to do one of the operations in O(1) time because you will need to essentially sort the elements in priority order as you add them. The other operation will be O(N). For example:
 
 ```java
 MyPriorityQueue q = new MyPriorityQueue();
