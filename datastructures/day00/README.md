@@ -57,9 +57,16 @@ Set up IntelliJ according to your preferences!
 
 ### Getting started with the code
 
-- Open IntelliJ. If IntelliJ opens a project, click *File > Close Project*. Then click *Open*, and navigate to `datastructures/day00`.
+- Open IntelliJ. If IntelliJ opens a project, click *File > Close Project*. T
+- If you don't know how to open IntelliJ, you likely saw something like this when installing:
+```
+Installing Idea
+/home/YOUR_USERNAME/.local/share/umake/ide/idea/bin/idea.sh  
+```
+ Run `idea.sh` in terminal to start it.
+- Once open, chose `Import Project`, navigate to the datastructures folder, select `day00`, and click through the prompts
 - If you don't see the Project sidebar on the left, click on `View > Tool Windows > Project`.
-- Open up `src/HelloWorld.java`. Right click on the `main` method and choose `Run`.
+- Open up `src/HelloWorld.java`. Click on the `main` method and choose `Run` (it might take a bit to load the run option).
 
 ### Debugger
 
@@ -68,9 +75,7 @@ Set up IntelliJ according to your preferences!
 ### If you have errors
 
 - If you have unrecognized imports, right click on the `lib/` folder and click on `Add as Library`
-- If you see a yellow bar at the top, click on `Setup SDK [this](https://docs.google.com/forms/d/e/1FAIpQLSfNHz1iT64AsXtsn9uTkECSrktoqjLE9tPuC5p5IeRgb3wWaQ/viewform?usp=sf_link) Google form to provide input and learning goals (also linked at the top of this README)
-- [ ] Git is installed.
-- [ ] I've forked the DSA-19 repository using [these](./GitSetup.md)/JDK` and choose `Java 11`
+- If you see a yellow bar at the top, click on `Setup SDK` and choose `Java 11`
 - If you get errors when importing source files, you may have to disable some android features. This can be done on the main screen under `configure` or if there is a yellow exclamation mark in the bottom right, click on that and follow the prompts
 - If you already had an older IntelliJ IDEA installed you should upgrade to the newer one
 - If you get the error
@@ -79,6 +84,7 @@ Set up IntelliJ according to your preferences!
 > Specify the output path in Configure Project.
 
 Click OK. A new window should open. IntelliJ needs you to specify a place for it to dump compiled Java code. On the left sidebar, choose `Project`. The last option, `Project compiler output`, should be empty (which is why it was complaining). Browse to and choose `day00/out/` as the compiler output folder. If that folder does not exist, simply `cd` into the `day00` directory, and execute `mkdir out/`. Run `main` again.
+- If you can't get past an error, feel free to reach out to the teaching team via email or slack
 
 # Assignment Checklist
 
