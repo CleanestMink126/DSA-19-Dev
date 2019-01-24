@@ -90,4 +90,4 @@ Click OK. A new window should open. IntelliJ needs you to specify a place for it
 - [ ] **Optional** I've familiarized myself with the debugger.
 - [ ] **Optional** I've completed 10 levels of the [Git tutorial](http://learngitbranching.js.org/)
 - [ ] I've joined [the DSA channel](https://olin.slack.com/messages/dsa-19) `#dsa-19` on Slack.
-- [ ] I've filled out [this](https://goo.gl/forms/epFStUdhHJpqvJ0h2https://docs.google.com/forms/d/e/1FAIpQLSeCqQlQbDWQcAGIcgvcJwXU6TzqCo7rUNqajY5OX8iQ_djlXQ/viewform?usp=sf_link)
+- [ ] I've filled out [this](https://docs.google.com/forms/d/e/1FAIpQLSeCqQlQbDWQcAGIcgvcJwXU6TzqCo7rUNqajY5OX8iQ_djlXQ/viewform?usp=sf_link)
