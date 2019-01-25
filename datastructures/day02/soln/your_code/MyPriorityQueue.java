@@ -1,4 +1,4 @@
-package soln;
+package your_code;
 
 import java.util.ArrayList;
 import java.util.List;
