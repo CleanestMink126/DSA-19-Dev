@@ -16,8 +16,8 @@ All these instructions were executed on an Ubuntu 16.04 and 18.04 systems, so if
 If you don't have `git` installed:
 
 ```
-sudo apt-get update
-sudo apt-get install git-core
+sudo apt update
+sudo apt install git-core
 git config --global user.name "Firstname Lastname" # your name here
 git config --global user.email "mygitemail@example.com" # the email used with your github account
 ```
@@ -34,9 +34,9 @@ Run the following commands:
 
 ```
 sudo add-apt-repository ppa:linuxuprising/java
-sudo apt-get update
-sudo apt-get install oracle-java11-installer
-sudo apt-get install oracle-java11-set-default
+sudo apt update
+sudo apt install oracle-java11-installer
+sudo apt install oracle-java11-set-default
 ```
 
 Run `java -version` and ensure you have correctly installed Java 11.
