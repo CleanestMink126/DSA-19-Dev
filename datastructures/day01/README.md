@@ -1,5 +1,7 @@
 # `ArrayLists`
 
+This homework is due Thursday, January 31st (see below for submission details).
+
 ## Learning Goals
 
 - Understand memory allocation of arrays
@@ -8,10 +10,10 @@
 
 ## Resources
 
-- Think Data Structures is available [here](http://greenteapress.com/thinkdast/thinkdast.pdf), or on the Google Drive.
+- Think Data Structures is available [here](http://greenteapress.com/thinkdast/thinkdast.pdf).
 - If you're having trouble understanding the implementations or runtimes of your `MyArrayList` methods, read **3.1, 3.2, 3.3**. (Think Data Structures' `ArrayList` stores data of type `E`. In our implementation, our `ArrayList` stores data of type `Cow`. For the most part, in the functions you can simply replace `E` with `Cow`).
 - [This](https://www.unf.edu/~wkloster/3540/wiki_book2.pdf#page=20) PDF has a great 2-page explanation of amortized analysis.
-- Our slides on arraylists are [here](https://drive.google.com/open?id=1x8qdI2GksyVpM0_fHHGxJQPM5nlPsmSeHLth2OoBSwM)
+- Our slides on arraylists are [here](https://docs.google.com/presentation/d/1GpCpt52tKbWvFCEuA0-7JGRquXoiqopMhWY68WLiRHE/edit?usp=sharing)
 
 
 ## `MyArrayList`
@@ -26,7 +28,7 @@ public class MyArrayList {
 
 With each problem, we will add functionality to our classes to more closely match the real functionality of a real Java `ArrayList`.
 
-Ben would like to start a farm that only contains cows. He wants your help in creating an `ArrayList` to store these cows in.
+Vicky would like to start a farm that only contains cows. He wants your help in creating an `ArrayList` to store these cows in.
 
 You will be provided a `Cow` class that your `MyArrayList` will *exclusively* store. Each `Cow` has the following properties:
 ```java
@@ -47,19 +49,19 @@ The tests you will be running on your `MyArrayList` class will be using this `Co
 
 For each of the following methods, leave a comment above your function detailing the runtime of your method. If the runtime is amortized, leave an asterisk after your runtime (eg, `O(1)*`).
 
-1. Ben's cows can vary in number. Create a constructor for `MyArrayList` that accepts a `capacity` parameter and initializes a `MyArrayList` of length `capacity`.
+1. Vicky's cows can vary in number. Create a constructor for `MyArrayList` that accepts a `capacity` parameter and initializes a `MyArrayList` of length `capacity`.
 
     `public MyArrayList(int capacity)`
 
-1. By default, Ben will only raise 10 cows. Specify a new empty constructor the initializes the cow array's size to 10.
+1. By default, Vicky will only raise 10 cows. Specify a new empty constructor the initializes the cow array's size to 10.
 
     `public MyArrayList()`
 
-2. Implement a method called `add` that will add a Cow to the end of your `MyArrayList`. Assume Ben will never go above `capacity`.
+2. Implement a method called `add` that will add a Cow to the end of your `MyArrayList`. Assume Vicky will never go above `capacity`.
 
     `public void add(Cow c)`
 
-3. How many cows does Ben have? Implement a method called `size` that returns the number of cows currently in your farm. Make sure to make this an `O(1)` operation.
+3. How many cows does Vicky have? Implement a method called `size` that returns the number of cows currently in your farm. Make sure to make this an `O(1)` operation.
 
     `public int size()`
 
@@ -75,7 +77,7 @@ For each of the following methods, leave a comment above your function detailing
 
     `public void add(int index, Cow c)`
 
-7. Thanks to your help, Ben's milk business has really gotten off the ground. He is able to expand his farm and is able to accept lots of cows. Modify your code so that we can **optimally** perform resizes. We never want to allocate more space than we need to, but we should also have an *average* insertion time complexity of `O(1)`. Make sure that your `MyArrayList` stays above 25% full. This will require halving the size of your array if it is less than 25% full, and doubling the size of it when it fills up. Think carefully about what your code will do: when down-sizing, make sure to have a "lower limit" so that the array does not eventually resize to length 1. You may find the function [`System.arraycopy`](https://docs.oracle.com/javase/7/docs/api/java/lang/System.html#arraycopy(java.lang.Object,%20int,%20java.lang.Object,%20int,%20int)) helpful.
+7. Thanks to your help, Vicky's milk business has really gotten off the ground. He is able to expand his farm and is able to accept lots of cows. Modify your code so that we can **optimally** perform resizes. We never want to allocate more space than we need to, but we should also have an *average* insertion time complexity of `O(1)`. Make sure that your `MyArrayList` stays above 25% full. This will require halving the size of your array if it is less than 25% full, and doubling the size of it when it fills up. Think carefully about what your code will do: when down-sizing, make sure to have a "lower limit" so that the array does not eventually resize to length 1. You may find the function [`System.arraycopy`](https://docs.oracle.com/javase/7/docs/api/java/lang/System.html#arraycopy(java.lang.Object,%20int,%20java.lang.Object,%20int,%20int)) helpful.
 
 ## Additional Practice (Optional)
 
@@ -94,4 +96,4 @@ If you're itching to write more code, try implementing one (or more) of the foll
 To get credit when you're done:
 
 - Go to NINJA hours to get checked off
-- Submit [this](https://tinyurl.com/OlinDSA1) survey
+- Submit [this](https://tinyurl.com/OlinDSA-01) survey
