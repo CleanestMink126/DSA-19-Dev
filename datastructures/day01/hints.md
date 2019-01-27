@@ -1,4 +1,4 @@
-#Hints
+# Hints
 
 3. Make sure to make this an `O(1)` operation.
 
