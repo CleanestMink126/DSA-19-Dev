@@ -107,6 +107,7 @@ System.out.println(s.maxElement()); // this should print 5
 s.pop(); // this pops the 5 off the stack
 System.out.println(s.maxElement()); // this should print 4, since it is the largest remaining element on the stack
 ```
+If you are stuck on this problem, you can try checking out the hint [here](https://github.com/Olin-DSA/DSA-19/tree/master/datastructures/day02/Hints.md)
 * Write a new class `MyPriorityQueue`, which supports `enqueue` and `dequeueMax`. This queue's `dequeueMax` function dequeues the largest element on the queue, rather than the element at the front of the queue. In this case, you will only be able to do one of the operations in O(1) time because you will need to essentially sort the elements in priority order as you add them. The other operation will be O(N). For example:
 
 ```java
