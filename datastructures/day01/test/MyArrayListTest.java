@@ -30,13 +30,17 @@ public class MyArrayListTest {
 
     @Test
     public void testGet(){
+        assertEquals(DELILAH,cows.get(0));
         assertEquals(GEORGY,cows.get(1));
         assertEquals(LILY,cows.get(2));
+        assertEquals(JIMY,cows.get(3));
     }
 
     @Test
     public void testRemove(){
         cows.remove(1);
+        assertEquals(3,cows.size());
+        assertEquals(LILY,cows.get(1));
         cows.remove(1);
         assertEquals(2,cows.size());
         assertEquals(JIMY,cows.get(1));
@@ -45,6 +49,8 @@ public class MyArrayListTest {
     @Test
     public void testAddIndex(){
         cows.add(1,JAQUAN);
+        assertEquals(5,cows.size());
+        assertEquals(GEORGY,cows.get(2));
         cows.add(1,LEGOS);
         assertEquals(6,cows.size());
         assertEquals(JAQUAN,cows.get(2));
