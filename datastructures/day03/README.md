@@ -1,4 +1,5 @@
 # Day03 - Linear data structures review
+This homework is due Thursday, February 7th (see below for submission details).
 
 # Learning Goals
 
@@ -36,3 +37,10 @@ How can you rewrite your function so that you don't need every operation to be s
 - You can ignore order of operations in the infix notation. That is, `1 + 2 * 3` should be converted to `1 2 + 3 *`
 
 Test your code with both `InfixToPostfixWithParens.java` and `InfixToPostfixNoParens.java`.
+
+## Submitting the assignment
+
+To get credit when you're done:
+
+- Go to NINJA hours to get checked off (on or before Thursday, February 7th)
+- Submit [this](https://tinyurl.com/OlinDSA-03) survey

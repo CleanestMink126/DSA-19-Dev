@@ -2,6 +2,16 @@ import java.util.*;
 
 public class Problems {
 
+    public static class Node {
+        int val;
+        Node next;
+
+        Node(int d) {
+            this.val = d;
+            next = null;
+        }
+    }
+
     public static List<Integer> removeKDigits(int[] num, int k) {
 
         LinkedList<Integer> arr = new LinkedList<>();
@@ -65,18 +75,18 @@ public class Problems {
     }
 
     // This code requies parens to surround operations
-    public static String infixToPostfix(String s) {
-        String[] tokens = s.split(" ");
-        List<String> output = new ArrayList<>();
-        Stack<String> stack = new Stack<>();
-        for (String c : tokens) {
-            if (isOperator(c)) stack.push(c);
-            else if (c.equals(")")) output.add(stack.pop());
-            else if (c.equals("(")) {
-            } else output.add(c);
-        }
-        return String.join(" ", output);
-    }
+//    public static String infixToPostfix(String s) {
+//        String[] tokens = s.split(" ");
+//        List<String> output = new ArrayList<>();
+//        Stack<String> stack = new Stack<>();
+//        for (String c : tokens) {
+//            if (isOperator(c)) stack.push(c);
+//            else if (c.equals(")")) output.add(stack.pop());
+//            else if (c.equals("(")) {
+//            } else output.add(c);
+//        }
+//        return String.join(" ", output);
+//    }
 
     // This code handles strings without parens surrounding operations
     public static String infixToPostfix(String s) {
