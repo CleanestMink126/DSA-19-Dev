@@ -20,10 +20,10 @@ public class MyHashMapTest {
     @BeforeEach
     public void setUp() throws Exception {
         map = new MyHashMap<>();
-        map.put("One", 1);
-        map.put("Two", 2);
-        map.put("Three", 3);
-        map.put("null", null);
+        map.put("Billy", 1);
+        map.put("Milly", 2);
+        map.put("Dilly", 3);
+        map.put("Gilly", null);
     }
 
     @Test
@@ -34,11 +34,11 @@ public class MyHashMapTest {
 
     @Test
     public void testContainsKey() {
-        assertEquals(true, map.containsKey("One"));
-        assertEquals(true, map.containsKey("Two"));
-        assertEquals(true, map.containsKey("Three"));
-        assertEquals(true, map.containsKey("null"));
-        assertEquals(false, map.containsKey("Four"));
+        assertEquals(true, map.containsKey("Billy"));
+        assertEquals(true, map.containsKey("Milly"));
+        assertEquals(true, map.containsKey("Dilly"));
+        assertEquals(true, map.containsKey("Gilly"));
+        assertEquals(false, map.containsKey("Bartholomew"));
     }
 
     @Test
@@ -50,10 +50,10 @@ public class MyHashMapTest {
 
     @Test
     public void testGet() {
-        assertEquals((int) map.get("One"), 1);
-        assertEquals((int) map.get("Two"), 2);
-        assertEquals((int) map.get("Three"), 3);
-        assertEquals(null, map.get("null"));
+        assertEquals((int) map.get("Billy"), 1);
+        assertEquals((int) map.get("Milly"), 2);
+        assertEquals((int) map.get("Dilly"), 3);
+        assertEquals(null, map.get("Gilly"));
     }
 
     @Test
@@ -67,16 +67,16 @@ public class MyHashMapTest {
     public void testKeySet() {
         Set<String> keySet = map.keySet();
         assertEquals(4, keySet.size());
-        assertEquals(true, keySet.contains("Three"));
-        assertEquals(true, keySet.contains("null"));
-        assertEquals(false, keySet.contains("Four"));
+        assertEquals(true, keySet.contains("Dilly"));
+        assertEquals(true, keySet.contains("Gilly"));
+        assertEquals(false, keySet.contains("Bartholomew"));
     }
 
     @Test
     public void testPut() {
-        assertEquals(1, (int) map.put("One", 11));
+        assertEquals(1, (int) map.put("Billy", 11));
         assertEquals(4, map.size());
-        assertEquals(11, (int) map.get("One"));
+        assertEquals(11, (int) map.get("Billy"));
 
         assertEquals(null, map.put("Five", 5));
         assertEquals(5, map.size());
@@ -85,10 +85,10 @@ public class MyHashMapTest {
 
     @Test
     public void testResize() {
-        for (int i = 0; i < 10000; i++)
+        for (int i = 0; i < 10000; i++)  //Prava got tired of naming her 10000 goats
             map.put(Integer.toString(i), i);
         assertEquals(9999, (int) map.get("9999"));
-        assertEquals(1, (int) map.get("One"));
+        assertEquals(1, (int) map.get("Billy"));
         MyHashMap temp = (MyHashMap) map;
         assertEquals(16384, temp.buckets.length);
         assertEquals(10004, map.size());
@@ -109,23 +109,23 @@ public class MyHashMapTest {
     @Test
     public void testPutAll() {
         Map<String, Integer> m = new HashMap<>();
-        m.put("Six", 6);
-        m.put("Seven", 7);
-        m.put("Eight", 8);
+        m.put("Silly", 6);
+        m.put("Hilly", 7);
+        m.put("Lilly", 8);
         map.putAll(m);
         assertEquals(7, map.size());
     }
 
     @Test
     public void testRemove() {
-        assertEquals(1, (int) map.remove("One"));
+        assertEquals(1, (int) map.remove("Billy"));
         assertEquals(3, map.size());
-        assertEquals(null, map.get("One"));
-        assertEquals(2, (int) map.remove("Two"));
+        assertEquals(null, map.get("Billy"));
+        assertEquals(2, (int) map.remove("Milly"));
         assertEquals(2, map.size());
-        assertEquals(3, (int) map.remove("Three"));
+        assertEquals(3, (int) map.remove("Dilly"));
         assertEquals(1, map.size());
-        assertEquals(null, map.remove("null"));
+        assertEquals(null, map.remove("Gilly"));
         assertEquals(0, map.size());
     }
 

@@ -14,38 +14,39 @@ Students will be able to:
 
 ## Due Date:
 
-Midnight, Feb. 8, 2018
-
+Midnight, Monday Feb. 8, 2018
 
 ## Assignment
 
 ### Resources
-- [Here](https://drive.google.com/open?id=194aE2RZ4tUBX4s9Ek1ot6HXRmfbfc2P4) are our slides for hashmaps.
+- [Here](https://drive.google.com/open?id=1SLt9ISrA3oyT35w6TzcF3ke0QyzS9jB4jPqtjwkoGm4) are our slides for hashmaps.
 
-- Today in lecture we spoke about the requirements of hash functions, but didn't actually cover how to write one. If you're curious, [this](https://youtu.be/VeHDbC02ENA?t=48s) video has got you covered.
-- The Princeton Algorithms class has a great [video lecture](https://youtu.be/0Yor2eyR2U4) about how to use multiple buckets proportional to the number of key-value pairs in the Hashmap, a concept they call Separate Chaining. Their implementation is not identical to ours, but it should give you an idea about how you can write your functions.
-- [This](https://youtu.be/shs0KM3wKv8?t=7s) this is a really short video explaining hashmaps. It does a really good job explaining exactly what a hash function does, and how it's used in Hashmaps.
+- [This](https://youtu.be/shs0KM3wKv8?t=7s) is a really short video explaining hashmaps. It does a really good job explaining exactly what a hash function does, and how it's used in Hashmaps.
+
+- [Think Data Structures](http://greenteapress.com/thinkdast/thinkdast.pdf) - Starting at Page 87. Covers hashing and hashmaps.
+
+- [Super great amazing explanation of Hashmaps](https://www.youtube.com/watch?v=TQls-N_TqMw)
 
 ### Code
+Prava has a lot of goats and not enough time to keep track of all of them. She needs a data structure to quickly store and retrieve their stall locations. Good thing you have the perfect solution!
 
-In this assignment, you will be implementing your own Java Map. That is, your object will satisfy the Java Map API. If your code isn't passing tests, make sure you understand what each of your functions is supposed to do by reading the [Java Map API](https://docs.oracle.com/javase/7/docs/api/java/util/Map.html). There are also comments in the code detailing what each function should do.
+To help Prava out, you will be **implementing your own Java Map**. That is, your object will satisfy the Java Map API. If your code isn't passing tests, make sure you understand what each of your functions is supposed to do by reading the [Java Map API](https://docs.oracle.com/javase/7/docs/api/java/util/Map.html). There are also comments in the code detailing what each function should do.
 
 In `MyHashMap.java`, implement:
-* `chooseBucket(Object key)`
-* `get(Object key)`
-* `containsKey(Object key)`
-* `containsValue(Object value)`
-* `rehash(double growthFactor)`
-* `put(K key, V value)`
-* `remove(Object key)`
+* **Internal**:`chooseBucket(Object key)`
+* **External**:`get(Object key)`
+* **External**:`containsKey(Object key)`
+* **External**:`containsValue(Object value)`
+* **Internal**`rehash(double growthFactor)`
+* **External**:`put(K key, V value)`
+* **External**:`remove(Object key)`
+
+(By **Internal** we mean the functions only accessible inside the API)  
+(By **External** we mean the functions accessible to the coder using the API)
 
 ### Problems
 
 Read SillyString.java. Understand the potential use of this class and try to identify issues with its hashCode() method.
-
-### Optional
-
-- Learn about another implementation of Hashmaps called a Linear Probing Hash Map from this [video lecture](https://www.youtube.com/watch?v=En5dVdkDF-E). This is the implementation Java actually uses, and it has much better real-life performance that our Separate Chaining Hashmap (though not better big-O performance).
 
 ### Checkoff
 
@@ -55,4 +56,4 @@ To be checked off, you'll be expected to explain (among other things):
 
 ### Survey
 
-You can fill out the survey ahead of next class [here](tinyurl.com/OlinDSA4).
+Fill out the survey [here](tinyurl.com/OlinDSA-04).
