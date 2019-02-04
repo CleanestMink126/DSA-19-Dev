@@ -14,7 +14,7 @@ Students will be able to:
 
 ## Due Date:
 
-Midnight, Monday Feb. 8, 2018
+Midnight, Monday Feb. 11, 2018
 
 ## Assignment
 
