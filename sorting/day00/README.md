@@ -29,6 +29,7 @@ By doing this assignment, you should be able to:
 **Time: O(N^2) / Space: O(N)**.  Given an array containing n tuples of points in a plane, a "boomerang" is a set of points (i, j, k) such that the distance between i and j is equal to the distance between j and k.  Find the number of boomerangs on the plane. Note that you can never have an odd number of boomerangs because every boomerang set counts twice, as it can be flipped.
 
 For example: Given the set of points [(0,0),(1,0),(2,0)], you should return 2. The boomerangs are [(0, 0), (1, 0), (2, 0)] and [(2,0), (1,0), (0,0)].
+
 Given the set of points [(0, 0), (1, 0), (2, 0), (1, 1)], you should return 8. The four unique boomerangs are [(0, 0), (1, 0), (2, 0)], [(1, 1), (1, 0), (2, 0)], [(0, 0), (1, 0), (1, 1)], and [(0, 0), (1, 1), (2, 0)]. The other four boomerangs with the same set of points are [(2, 0), (1, 0), (0, 0)], [(2, 0), (1, 0), (1, 1)], [(1, 1), (1, 0), (0, 0)], and [(0, 0), (1, 1), (2, 0)].
 
 There are [hints](https://github.com/Olin-DSA/DSA-19/blob/master/sorting/day00/hints.md) for this question.
