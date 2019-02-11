@@ -15,6 +15,8 @@ By doing this assignment, you should be able to
 
 Note: If you need to sort an array/list in your algorithm, use the sort method provided by java. You don't need to write your own sort function again.
 
+Checkout the hints.md if you get stuck.
+
 ### Locks and Keys  
 
 You have a mixed pile of N locks and N keys and need to quickly find the corresponding pairs of locks and keys. Each lock matches exactly one key, and each key matches exactly one lock. By fitting a lock and key together, you can see which is bigger. **But it is not possible to directly compare two locks or two keys**. Write an efficient methods which sorts both arrays such that that locks and keys align with eachother, and are sorted. (You can't use the built in sort function, because this will compare locks to locks, and keys to keys).
