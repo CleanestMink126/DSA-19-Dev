@@ -56,6 +56,29 @@ public class FrequencyPrintTest {
         stringisSorted(re);
     }
 
+    @Test
+    public void testFrequencyPrint7() {
+        char[] temp = new char[100];
+        for(int i= 0; i < 20;i+=3){
+            temp[i] = 'a';
+        }
+        for(int i= 30; i < 60;i+=5){
+            temp[i] = 'b';
+        }
+        for(int i= 70; i < 100;i+=2){
+            temp[i] = 'c';
+        }
+        temp[99] = 'd';
+        String space10 = new String(temp);
+        space10 = space10.replace("a", "goat ");
+        space10 = space10.replace("b", "pig ");
+        space10 = space10.replace("c", "cow ");
+        space10 = space10.replace("d", "Farmer Nick");
+        space10 = space10.replace("\0", "sheep ");
+        String re = FrequencyPrint.frequencyPrint(space10);
+        assertStringsHaveEqualsCounts(space10, re);
+        stringisSorted(re);
+    }
 
     private void stringisSorted(String s) {
         // this is to make sure that the words in the string is positioned in order
