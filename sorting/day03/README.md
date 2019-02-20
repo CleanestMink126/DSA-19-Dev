@@ -1,6 +1,6 @@
 # Sorting Day 3 - Counting and Radix Sort
 
-**This assignment is due Tuesday, February 27th**
+**Due Monday February 25, 2019**
 
 ## Learning Goals
 
@@ -50,11 +50,6 @@ If you're having trouble with radix sort, you can continue watching the [MIT lec
 
 You are given an array of integers in the range [-100, 100], inclusive. Write a function to sort them as quickly as possible. Feel free to use code you've already written.
 
-<details> 
-  <summary>Hint 1</summary>
-  How can you modify the data you are given to make working with it easier?
-</details>
-
 ### Sort array of `String`s
 
 You are given an array of Strings, all with the same length, all lower case characters. How can you sort the strings using the concepts covered in class and this homework?
@@ -63,21 +58,14 @@ You will probably find it useful to have a function that sorts the array by the 
 
 Note the helper function `getNthCharacter(String s, int n)`. This returns the nth character of the String as an integer. That is, calling `getNthCharacter("katie", 1)` would return `8`, because the character `i` is the 8th letter in the alphabet (indexing from 0). `getNthCharacter("katie", 3)` returns `0`, because `'a'=0`
 
-<details> 
-  <summary>Hint 1</summary>
-  Take advantage of the fact that radix sort does not have be in base 10.
-</details>
-
-## Optional: Counting Swaps (Review)
+### **Optional**: Counting Swaps (Review)
 
 Given an array of integers, return the number of swaps that must be performed between adjacent indices to sort the array. Your solution should run in `O(n log(n))`. A sorted or empty array should return 0.
 
-<details> 
-  <summary>Hint 1</summary>
-  For every instance of an array in which A[i] > A[j] while i < j, a swap will have to be performed.
-</details>
 
-<details> 
-  <summary>Hint 2</summary>
-  Merge sort allows for comparison of adjacent elements at its lowest level. It also allows for comparison of indexes between already sorted arrays as it recurses up during merges.
-</details>
+## Submitting the Assignment
+
+* Go to NINJA hours to get checked off (on or before Monday, February 25th).
+* Provide an explanation and time complexities for both counting sort and radix sort.
+* Talk through the problems with the Ninja
+* Complete the [survey]([survey](https://tinyurl.com/OlinDSA-08)).
