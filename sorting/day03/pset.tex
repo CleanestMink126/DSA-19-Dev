@@ -27,9 +27,9 @@
 
 \maketitle
 
-\subsection*{}
-
 \begin{enumerate}
+
+\subsection*{Core}
 
 %%%%% PROBLEM 1 %%%%%
 \item You are given a deck of many, many cards. The all have values from $A=1$ to King$=13$. Cards with the same value are also ranked by suit. Spades $>$ Hearts $>$ Clubs $>$ Diamonds. Find an efficient way of sorting a given array of Cards (Card[]) in ascending order. (i.e. Ace of hearts should show up before Ace of spades, and Ace of spades should show up before three of spades)
@@ -44,6 +44,8 @@ The definition for the Cards class is as follows:
 \end{lstlisting}
 
 \item You are given a list of algorithm runtimes in $HH:MM:SS$ format. Return an array with these times in sorted order (i.e. $[04:05:11,10:15:01]$). You can assume you already have functions that can parse out the hours, minutes, and seconds portions of a time and can form a time string with properly padded 0's given the hours, minutes, and milliseconds. ($minutes("04:05:11")=5$, $getTime(4,5,11)="04:05:11"$)
+
+\subsection*{Extension}
     
 \item You have the $X$ and $Y$ coordinates of $N$ points on the plane. You are also given the coordinates of point $A$. Return the $K$ closest points to $A$.
 
