@@ -46,7 +46,8 @@ public class HeapSort extends SortAlgorithm {
      * Worst-case runtime: O(NlogN)
      * Average-case runtime: O(NlogN)
      *
-     * Space-complexity: O(1)
+     * Space-complexity: O(logN)* Currently sink creates a logN stack. If you are concerned about space complexity you can do it in
+     * O(1) by instead by having sink return the element to sink next.
      */
     @Override
     public int[] sort(int[] array) {
