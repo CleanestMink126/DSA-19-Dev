@@ -76,9 +76,12 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     public T findPredecessor(T key) {
+        // finds and returns the TreeNode with key = key if such a TreeNode exists in the tree
         TreeNode<T> n = find(root, key);
         if (n != null) {
+            // get the predecessor TreeNode by calling the function you will implement below
             TreeNode<T> predecessor = findPredecessor(n);
+            // return the key of predecessor TreeNode
             if (predecessor != null)
                 return predecessor.key;
         }
@@ -86,9 +89,12 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     public T findSuccessor(T key) {
+        // finds and returns the TreeNode with key = key if such a TreeNode exists in the tree
         TreeNode<T> n = find(root, key);
         if (n != null) {
+            // get the successor TreeNode by calling the function you will implement below
             TreeNode<T> successor = findSuccessor(n);
+            // return the key of successor TreeNode
             if (successor != null)
                 return successor.key;
         }
