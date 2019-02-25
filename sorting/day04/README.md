@@ -1,5 +1,7 @@
 # Sorting Day 4 - Divide and Conquer
 
+This homework is due Thursday, February 28 (see below for submission details).
+
 ## Learning Goals
 
 - Gain experience designing divide and conquer algorithms
@@ -8,13 +10,17 @@
 
 ## Resources
 
-- [Notes from today's lecture](https://drive.google.com/open?id=144AICowC4teB7Hm9vO90Xny6rI5Dc8NCguySJsfjQLI)
+- [Notes from today's lecture](https://docs.google.com/presentation/d/1I2WI0X_SqtQ7iSRFgKcTbW5dnT3DeOHiYyqvEVncwxo/edit?usp=sharing)
 - [MIT Lecture](https://youtu.be/-EQTVuAhSFY?t=1m17s) on Divide + Conquer. Our lecture used material from the first ~17 minutes of this lecture.
 - [MIT Convex Hull lecture](https://youtu.be/EzeYI7p9MjU?t=7m16s). Skip [here](https://youtu.be/EzeYI7p9MjU?t=36m17s) if you just want the discussion on the Combine step.
 - If you are doing the Peek-finding problem for HW, you will likely find [this](https://drive.google.com/open?id=189xjtCH--VZ7dug5-Df5Quig9GVuk35W) PDF useful, as well as the corresponding [video lecture](https://www.youtube.com/watch?v=HtSuA80QTyo&feature=youtu.be&t=15m26s) (also linked down below).
+- There is a [`hints.md`](https://github.com/Olin-DSA/DSA-19/blob/master/sorting/day04/hints.md) document for all of these questions!
+
 ## Assignment
 
 For this assignment, **choose one of the following algorithms, and complete the associated file so the tests pass.**
+
+Remember that there is a [`hints.md`](https://github.com/Olin-DSA/DSA-19/blob/master/sorting/day04/hints.md) document with hints for all of the following questions.
 
 ### Boston Skyline
 
@@ -29,22 +35,6 @@ Your task is to write an algorithm that outputs the "skyline" of a series of bui
 ![](https://i.imgur.com/gktU3lV.jpg)
 
 For this series of buildings, your function would return `[[1, 2], [3, 4], [5, 0], [6, 2], [8, 1], [9, 0]]`. Your algorithm should run in better than `O(N^2)` time, where N is the number of buildings.
-
-<details>
-  <summary>Hint 1</summary>
-  First, imagine you already have two "skylines", and you overlay them. Write a function that outputs the corresponding "merged" skyline.
-</details>
-
-<details>
-  <summary>Hint 2</summary>
-  Your algorithm for this problem will look very similar to mergesort.
-</details>
-
-<details>
-  <summary>Hint 3</summary>
-  Split the list of buildings in half. Calculate the skyline for each half, and then merge the results together.
-</details>
-
 
 ### Radio Towers
 
@@ -74,17 +64,6 @@ We divide `S` into squares of size 1/2. No two valid towers can be in the same 1
 
 ![](https://i.imgur.com/0oS0ntc.jpg)
 
-<details>
-  <summary>Hint 1</summary>
-  Split the problem in half with a horizontal line. Then divide and conquer.
-</details>
-
-<details>
-  <summary>Hint 2</summary>
-  Solve the problem for the top-half and bottom-half of towers by recursively calling `validTowers` and splitting apart `Lx` and `Ly` into the `Lx` and `Ly` for the top and bottom halves of the towers. Then use your `checkStrip` function on the towers along the border of the two halves.
-</details>
-
-
 ### Peak-Finding
 
 #### 1-D Array
@@ -109,22 +88,8 @@ The [MIT lecture notes](https://drive.google.com/open?id=189xjtCH--VZ7dug5-Df5Qu
 
 **Implement `int[] findTwoDPeak(int[][] nums)`, where `answer[0]` is the row index and `answer[1]` is the column index of any peak. In other words, the peak is `nums[answer[0]][answer[1]]`.**
 
-<details>
-  <summary>Hint 1</summary>
-  The problem with the NlogN solution is that even as we cut down the problem horizontally, the problem never shrinks vertically, and we keep paying an O(N) cost to find the max of the current column we're considering.
-</details>
-
-<details>
-  <summary>Hint 2</summary>
-  After we've "divided" the problem in half twice, how can we make sure the problem has been cut in half in both dimensions?
-</details>
-
-<details>
-  <summary>Hint 3</summary>
-  Alternate between looking at the max of a column and comparing it to the elements to its left and right and looking at the max of a row and comparing it to the elements above and below it.
-</details>
-
 ## Getting Checked Off
 
 - Talk your NINJA through your solution and runtime to whichever algorithm you implemented
 - Explain the Base Case, Divide, Conquer, Combine steps you used.
+- Fill out the [survey](https://tinyurl.com/OlinDSA-09).
