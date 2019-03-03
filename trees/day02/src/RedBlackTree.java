@@ -26,6 +26,13 @@ public class RedBlackTree<T extends Comparable<T>> extends BinarySearchTree<T> {
     }
 
 
+    //For the rotates, don't forget to reassign colors. If you are unclear about
+    //how to do this, you can try drawing ou examples and make sure you
+    //maintain the requirements of a LLRB:
+    //-All leaves have the same black distance
+    //-No right red nodes
+    //-No 2 red nodes in a row
+
     // make a left-leaning link lean to the right
     TreeNode<T> rotateRight(TreeNode<T> h) {
         // TODO
