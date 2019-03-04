@@ -1,10 +1,6 @@
 # HW 12 - AVL Trees
 
-**This assignment is due Friday, March 9th**
-
-## Feedback and Responses
-
-[This link](https://docs.google.com/document/d/1RV_HCr8e2KmnIBQ1NwCcQmmA2R7Ifq7I-DZENCbh2aU/edit?usp=sharing) leads to our responses to the feedback session we had two weeks ago. We did our best to explain what we could, could not, would, and would not implement based on these. As always, if you have continued feedback or if you feel a comment was misunderstood, please reach out to / talk with us.
+This homework is due on Thursday, March 7th (see below for submission details).
 
 ## Learning Goals
 
@@ -15,7 +11,7 @@ By doing this assignment, you should be able to
 * Understand the runtime of operations performed on AVL trees
 
 ## Resources
-* [Slides](https://docs.google.com/presentation/d/1-g9vro8MddzA_VaScRGNgwZtIQ0QO7a556Ov39jHAes/edit?usp=sharing)
+* [Slides](https://drive.google.com/open?id=1g5sIGPV_qg6reqtI_8fCVnvOEWidDLgElCRx1txDOZk)
 * [MIT Lecture](https://www.youtube.com/watch?v=FNeL18KsWPc&feature=youtu.be)
 * [MIT Notes](https://drive.google.com/open?id=1ZVGk7NRJDvuvLc2X80leysgOhCMsuoNN)
 * [AVL Tree generator](https://visualgo.net/avl)
@@ -44,7 +40,7 @@ Draw out and label each step that must be performed to balance this tree:
 
 ### The new `delete` method
 
-Given that parent pointers are now gone, `BST.delete` can no longer rely on `findSuccessor` or `findPredecessor`. We fixed that by writing a new method, `deleteMin(n)`, in `BST`, that we use to replace n with its right child's minimum (aka successor). We provide you with both `BST` and `AVL` versions of `deleteMin`. 
+Given that parent pointers are now gone, `BST.delete` can no longer rely on `findSuccessor` or `findPredecessor`. We fixed that by writing a new method, `deleteMin(n)`, in `BST`, that we use to replace n with its right child's minimum (aka successor). We provide you with both `BST` and `AVL` versions of `deleteMin`.
 
 **You should read through and understand ALL pieces of code described above**
 
@@ -63,7 +59,7 @@ Fill out the following functions:
 Run corresponding tests in `AVLTreeTest.java` to make sure your implementations are correct.
 
 
-### Least Sums (Review)
+### Least Sums (Review + Optional + Gives 1 late day)
 
 Using a given array of integers, 0 through 9 (there can be duplicates), as the digits, construct two numbers such that their sum is as small as possible. Your solution should run in `O(n)`.
 
@@ -72,3 +68,9 @@ Return: 123 + 128 = 251
 
 
 **As always, consider the runtime of any code you write**
+
+
+## Submitting the Assignment
+* Go to NINJA hours to get checked off
+* Talk to a NINJA with your working test cases and your AVL tree drawing. Make sure you are prepared to explain your high-level solution to the problems **without looking through your code**. Feel free to draw out the steps of your algorithm beforehand if you feel like it would help.
+* Complete the [survey](https://goo.gl/forms/RekVcwnF6iyyy6Cj2).
