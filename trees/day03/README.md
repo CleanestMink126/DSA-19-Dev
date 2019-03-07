@@ -26,7 +26,7 @@ You are tasked with designing a data structure which supports efficient range-qu
 
 We recommend an AVLTree as a starting point, and have provided our solution in the file `AVLRangeTree`. **It is expected that you modify `AVLRangeTree`, and/or `BinarySearchTree`, and/or `RangeNode`.** Augment the data structure in order to more efficiently perform these operations. Your `AVLRangeTree`'s performance on `insert`, `delete`, and `find` must remain `O(logN).`
 
-**See [`hints.md`](https://github.com/Olin-DSA/DSA-19/blob/master/trees/day03/hints.md) document for hints on this question.**
+**See the [`hints.md`](https://github.com/Olin-DSA/DSA-19/blob/master/trees/day03/hints.md) document for hints on this question.**
 
 **As always, consider the runtime of any code you write**
 
