@@ -1,6 +1,6 @@
 # HW 14 - BST/Divide+Conquer Review
 
-**This assignment is due Friday, March 16**
+**This assignment is due Thursday, March 14**
 
 
 ## Learning Goals
@@ -26,24 +26,11 @@ You are tasked with designing a data structure which supports efficient range-qu
 
 We recommend an AVLTree as a starting point, and have provided our solution in the file `AVLRangeTree`. **It is expected that you modify `AVLRangeTree`, and/or `BinarySearchTree`, and/or `RangeNode`.** Augment the data structure in order to more efficiently perform these operations. Your `AVLRangeTree`'s performance on `insert`, `delete`, and `find` must remain `O(logN).`
 
-<details>
-  <summary>Hint 1: Optimal Complexities</summary>
-  rangeCount should run in O(log(N)). rangeIndex should run in O(log(N) + L), where L = number of keys between [lo,  hi].
-</details>
-
-<details>
-  <summary>Hint 2: `rangeCount`</summary>
-  As a first step, write a function rank(k) which returns the number of keys <= k.
-</details>
-
-<details>
-  <summary>Hint 3: `rangeCount`</summary>
-  Augment the RangeNode to store the number of nodes in its subtree.
-</details>
-
-<details>
-  <summary>Hint 4: `rangeIndex`</summary>
-  Your solution to this will look quite similar to an in-order-traversal.
-</details>
+**See [`hints.md`] (https://github.com/Olin-DSA/DSA-19/blob/master/trees/day03/hints.md) document for hints on this question.**
 
 **As always, consider the runtime of any code you write**
+
+## Getting Checked Off
+
+- Talk your NINJA through your solution and runtime to whichever algorithm you implemented
+- Fill out the [survey](https://goo.gl/forms/pyD7UqqPUuewB80h1).
