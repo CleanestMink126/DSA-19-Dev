@@ -15,7 +15,7 @@ By doing this assignment, you should
 
 ## Divide and Conquer
 
-Choose one of the three problems from the [the D+C conquer HW](https://github.com/Olin-DSA/DSA-18/tree/master/sorting/day04) to do (do not choose the one you have already done). Make sure you note your Base Case, Divide, Conquer, Combine steps, and determine the runtime of your algorithm.
+Choose one of the three problems from the [the D+C conquer HW](https://github.com/Olin-DSA/DSA-19/tree/master/sorting/day04) to do (do not choose the one you have already done). Make sure you note your Base Case, Divide, Conquer, Combine steps, and determine the runtime of your algorithm.
 
 ## Range Queries
 
@@ -26,7 +26,7 @@ You are tasked with designing a data structure which supports efficient range-qu
 
 We recommend an AVLTree as a starting point, and have provided our solution in the file `AVLRangeTree`. **It is expected that you modify `AVLRangeTree`, and/or `BinarySearchTree`, and/or `RangeNode`.** Augment the data structure in order to more efficiently perform these operations. Your `AVLRangeTree`'s performance on `insert`, `delete`, and `find` must remain `O(logN).`
 
-**See [`hints.md`] (https://github.com/Olin-DSA/DSA-19/blob/master/trees/day03/hints.md) document for hints on this question.**
+**See [`hints.md`](https://github.com/Olin-DSA/DSA-19/blob/master/trees/day03/hints.md) document for hints on this question.**
 
 **As always, consider the runtime of any code you write**
 
