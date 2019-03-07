@@ -28,7 +28,7 @@
 
 \maketitle
 
-\subsection*{}
+\subsection*{Core}
 
 
 \begin{enumerate}
@@ -37,36 +37,39 @@
 public class RBNode<T> {
     T key;
     RBNode<T> leftChild, rightChild;
-    int height;
     boolean isRed;
 }
 \end{lstlisting}
+
 
 \item  Write a function \texttt{is23(RBNode n)} that, given the root of a RB-tree, checks that no node is connected to two red links and that there are no right-leaning red links.
 
 \item  Write a function \texttt{isBalanced(RBNode n)} that, given the root of a RB-tree, checks that all paths from the root to a null link have the same number of black links.
 
 \item Write a function \texttt{isLLRB(RBNode n)} which returns true if n is the root of a valid LLRB.
+\end{enumerate}
+\subsection*{Review}
+\begin{enumerate}
 
-\item A binary search tree and a circular doubly linked list are conceptually built from the same type of nodes - a data field and two references to other nodes. Given a binary search tree, rearrange the references so that it becomes a circular doubly-linked list (in sorted order). Your LinkedList class will be very similar to our implementation in previous classes:
-
-\begin{lstlisting}[language=Java]
-public class Node {
-    int val;
-    Node prev, next;
-}
-
-public class CircularLinkedList {
-    Node head, tail;
-}
-
-\end{lstlisting}
-
-
-The only difference being that \texttt{head.prev} points to \texttt{tail}, and \texttt{tail.next} points to \texttt{head}.
 
 \item Given the root of a binary tree, return the length of the furthest path between two leaves. Assume you have access to the heights of each node. 
 
+Can you do it faster than O(N)?
+
+
+\item You are given the root of a tree and two elements. You can assume that these elements exist in the given tree once. Find the least common ancestor of the two elements. The least common ancestor of two nodes is the furthest node from the root of the tree such that the tree rooted at that node contains both of the elements. For example:
+
+\begin{lstlisting}
+    _______3______
+   /              \
+ __5__          ___1__
+/     \        /      \
+6      2      0        8
+      / \
+     7   4
+\end{lstlisting}
+
+The least common ancestor of 7 and 1 is 3. The LCA of 6 and 5 is 5. The LCA of 6 and 4 is 5.
 
 
 \end{enumerate}
@@ -129,40 +132,6 @@ isLLRB(RBNode n):
 
 \begin{lstlisting}[language=Python]
 
-bstToLL(TreeNode treenode):
-    if treenode is null:
-        return treenode
-
-    L = bstToLL(treenode.left)
-    R = bstToLL(treenode.right)
-    N = new LLNode(treenode.val)
-    head = N
-    tail = N
-    if L:
-        # connect middle to left
-        L.tail.next = N
-        N.prev = L.tail
-        head = L.head
-    if R:
-        # connect middle to right
-        R.head.prev = N
-        N.next = R.head
-        tail = R.tail
-
-    # connect left to right
-    head.prev = tail
-    tail.next = head
-
-    return new CircularLinkedList(head, tail)
-
-
-\end{lstlisting}
-
-\item
-
-
-\begin{lstlisting}[language=Python]
-
 largestSpan(RBNode n):
     # the idea behind this is the maximum span necessarily
     # has to involve the node with the maximum depth
@@ -181,7 +150,16 @@ largestSpan(RBNode n):
 
 \end{lstlisting}
 
-
+\item
+\begin{lstlisting}[language=Java]
+LCA(root, node1, node2):
+    if (root == null || root == node1 || root == node2) return root
+    left = LCA(root.left, node1, node2)
+    right = LCA(root.right, node1, node2)
+    if(left == null) return right
+    if(right == null) return left
+    return root
+\end{lstlisting}
     
     
 \end{enumerate}
@@ -192,5 +170,50 @@ largestSpan(RBNode n):
 
 
 \end{document}
+% \item A binary search tree and a circular doubly linked list are conceptually built from the same type of nodes - a data field and two references to other nodes. Given a binary search tree, rearrange the references so that it becomes a circular doubly-linked list (in sorted order). Your LinkedList class will be very similar to our implementation in previous classes:
+
+% \begin{lstlisting}[language=Java]
+% public class Node {
+%     int val;
+%     Node prev, next;
+% }
+
+% public class CircularLinkedList {
+%     Node head, tail;
+% }
+
+% \end{lstlisting}
 
 
+% The only difference being that \texttt{head.prev} points to \texttt{tail}, and \texttt{tail.next} points to \texttt{head}.
+
+% \begin{lstlisting}[language=Python]
+
+% bstToLL(TreeNode treenode):
+%     if treenode is null:
+%         return treenode
+
+%     L = bstToLL(treenode.left)
+%     R = bstToLL(treenode.right)
+%     N = new LLNode(treenode.val)
+%     head = N
+%     tail = N
+%     if L:
+%         # connect middle to left
+%         L.tail.next = N
+%         N.prev = L.tail
+%         head = L.head
+%     if R:
+%         # connect middle to right
+%         R.head.prev = N
+%         N.next = R.head
+%         tail = R.tail
+
+%     # connect left to right
+%     head.prev = tail
+%     tail.next = head
+
+%     return new CircularLinkedList(head, tail)
+
+
+% \end{lstlisting}
