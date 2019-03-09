@@ -2,9 +2,10 @@
 
 ## Resources
 
-* [Lecture slides](https://docs.google.com/presentation/d/1dGAts7iDMSpQAvbanJb4GoQvsraQ3-X4gqNLC02APqs/edit?usp=sharing) from today
-* Princeton lecture on Graph API and data-structure: https://youtu.be/AixTJNS3Z84
-* Princeton lecture on DFS: https://youtu.be/ZmoVxpZomKs
+* [Lecture slides](https://docs.google.com/presentation/d/1eicjPBQShQ31tUKKEg63XPFDfxAkE0NgWmUv_bkLf-g/edit?usp=sharing) from today
+* Tutorial on graph data structures for beginners: https://adrianmejia.com/blog/2018/05/14/data-structures-for-beginners-graphs-time-complexity-tutorial/
+* Stony Brook University lecture on graph data structures: https://www.youtube.com/watch?v=PsJS89WFUAA
+* MIT lecture on Graph-theoretic models: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/lecture-videos/lecture-3-graph-theoretic-models/
 
 ## Homework
 
