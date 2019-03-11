@@ -153,6 +153,7 @@ public class RedBlackTree<T extends Comparable<T>> extends BinarySearchTree<T> {
 
 
     // delete the key-value pair with the given key rooted at h
+    //Refer to the linked princeton lecture document for more guidance on this
     TreeNode<T> delete(TreeNode<T> h, T key) {
         // OPTIONAL TODO
         if (key.compareTo(h.key) < 0) {
