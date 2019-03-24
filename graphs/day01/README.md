@@ -1,12 +1,12 @@
 # Graphs Day 01 - Recursive Backtracking
 
-This homework is due on **Next Monday (April 2) at 10pm**.
+This assignment is due Thursday, March 28
 
 # Resources
 
 - [U Texas Slides](https://www.cs.utexas.edu/~scottm/cs314/handouts/slides/Topic13RecursiveBacktracking.pdf)
 - [Stanford PDF](https://drive.google.com/open?id=1PoNEWRAI6s7em0eHVPgQAL2l-2__eq4l)
-- [Our Slides](https://drive.google.com/open?id=1Cu_24HYXFxT4x29JgURj60sF4KTPH3Uh6E0ARDguJqU)
+- [Our Slides](https://drive.google.com/open?id=1x3wT-U3PDqrUKjAz65eIDITFbPptiX9A_OLlsrJGfPU)
 
 # Learning Goals
 
@@ -40,20 +40,6 @@ For example, here is one of the two 4-queens solutions:
 
 Write your code in the `NQueens` class. Note that for the tests to pass, you will need to represent the chess-board as a `char[n][n]` - an NxN 2-D `char` array. Represent blank squares with a period: `'.'`, and queens with a capital `'Q'`.
 
-<details>
-  <summary>Hint 1</summary>
-  There must be a queen in every row of the chess board. Start at the top row of the board, and try to assign a queen to each column. Pass along which row you are currently assigning as a variable in your recursive function.
-</details>
-
-<details>
-  <summary>Hint 2</summary>
-  Use a data structure with O(1) access to store which columns contain queens.
-</details>
-
-<details>
-  <summary>Hint 3</summary>
-  We have provided a function to check if a Queen is on a the same diagonal as an input location (read the function comment to understand what it does). You may find this function helpful when checking if a location is valid for a queen.
-</details>
 
 ## Coins on a Clock
 
@@ -76,17 +62,6 @@ Output array: [p,  d, n, p, p, n, d, p, d, n, n,  d]
 - You are now at 9 o'clock. You place a nickel.
 - At 2 o'clock, you place another nickel.
 - Etc.
-
-<details>
-  <summary>Hint 1</summary>
-  Keep track of how many of each coin you have remaining. If all are 0, then you have completed the puzzle.
-</details>
-
-
-<details>
-  <summary>Hint 2</summary>
-  Make one of your recursion variables the current location to place a coin (for example, call it `i`). Ie, for your first recursive call, `i=0`. If you then place a dime, in your next recursive call, `i=10`.
-</details>
 
 ## Cryptarithmetic Puzzle
 
@@ -127,10 +102,6 @@ for (int i: randomOrder()) {
     // some code here
 }
 ```
-<details>
-  <summary>Hint 1</summary>
-  Keep track of a `Set` of unassigned characters in your recursion.
-</details>
 
 
 ### (Optional) Optimizations
@@ -139,4 +110,6 @@ Certain implementations of this algorithm may be really slow on longer test case
 
 ## Checkoffs
 - Know the space and time complexity of your algorithms
-- Find the coolest anagram for your name (if your name is longer than 6 characters, then you don't have to do it.)
+- Answer questions about the implemented algorithms
+- Know the base cases for each algorithm
+- Fill out the [survey](https://drive.google.com/open?id=1gVKKDrzcUvC3wj8rDGpE18xYG0m5zdrQTtaAM-9fuGw)
