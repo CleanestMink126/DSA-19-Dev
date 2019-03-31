@@ -1,8 +1,8 @@
 # Graphs day03 - 8 puzzle
 
-This homework is due **Tuesday, April 10th**.
+This homework is due **Monday, April 8th**.
 
-Create the necessary classes to implement an 8-puzzle solver.  If you need a reminder of the puzzle details or any of the solve methods that we talked about in class, refer back to [these slides](https://docs.google.com/presentation/d/1zJbRSPKuceEXCWVJQBBr2GujkauqHSGjNt2i9qTxJBc/edit?usp=sharing)
+Create the necessary classes to implement an 8-puzzle solver.  If you need a reminder of the puzzle details or any of the solve methods that we talked about in class, refer back to [these slides](https://docs.google.com/presentation/d/1XoNUmTvc56hEAQJ7DbnZcHAssUdFxeWXPwreey-bo3g/edit?usp=sharing)
 
 A very basic set of tests has been provided, but it is up to you to create any other intermediary tests that may be necessary / helpful.
 
@@ -25,15 +25,7 @@ Methods to Complete:
 
 - Plus: whatever helper methods you need to make your code readable / debuggable
 
-<details>
-  <summary>Hint 1</summary>
-  When identifying neighbors, consider the literal edge cases when trying to move pieces into the blank spaces
-</details>
-
-<details>
-  <summary>Hint 2</summary>
-  Having a visual representation of the board can be a great debugging tool. Consider writing a method to create one.
-</details>
+Check the `hints.md` document for some helpful tips!
 
 ## `Solver` Class:
 
@@ -56,3 +48,7 @@ Methods:
 ## Optional
 
 As a challenge, you can add optional features to your solver such as a command line interaction for users to input game states that they want solutions for.  If you want to try other search algorithms, you could also implement a Dijkstra version of the Solver and compare the performance. You can also try to augment it such that the code runs as fast as possible.
+
+## Submission Details
+- Be able to explain your 8puzzle solution to a Ninja
+- Finish the [survey](https://forms.gle/BpXiDXMBD2y3bY5e8)
