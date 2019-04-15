@@ -10,11 +10,11 @@ public class TestLongestCommonSubsequence {
     }
     @Test
     public void testTwo() {
-        assertEquals(0, LongestCommonSubsequence.LCS("", "DAVID"));
+        assertEquals(0, LongestCommonSubsequence.LCS("", "NATHAN"));
     }
     @Test
     public void testThree() {
-        assertEquals(3, LongestCommonSubsequence.LCS("BENJAMIN", "STEELMAN"));
+        assertEquals(2, LongestCommonSubsequence.LCS("NATHAN", "PRAVA"));
     }
     @Test
     public void testFour() {
