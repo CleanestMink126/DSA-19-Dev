@@ -1,48 +1,50 @@
 # Greedy Algorithms
 
-**This assignment is due Friday, April 20**
+**This assignment is due Monday, April 22**
 
 - If you want a refresher on today's lecture, check out the [class slides](
-https://docs.google.com/presentation/d/1bZJYxjjLDQM9pb6idgpQck2H7rkhpK1mTc0ROHu93u4/edit?usp=sharing
-).
+https://docs.google.com/presentation/d/1dqCJ5dEeK28cr-u2gjuaGdB4DoQ3iU1fBOcW3vMykm0/edit?usp=sharing).
 - If you aren't sure how to validate that a greedy algorithm always produces the correct solution, check out this [PDF](https://drive.google.com/open?id=0B_K4P69ad_l_RG9vc0VZeDhyWUk) on the greedy exchange property.
 - Finally, if you want to watch another lecture, the [MIT lecture](https://youtu.be/2P-yW7LQr08?t=17m28s) covered the interval scheduling problem from class today. The formal proof of why the greedy algorithm is corect for interval scheduling begins at [42:39](https://youtu.be/2P-yW7LQr08?t=42m39s).
+- If you need additional help, refer to the [`hints.md`](https://github.com/Olin-DSA/DSA-19/blob/master/greedy/hints.md) document.
 
 ## Learning Goals
 - Know how to identify a greedy problem
 - Be able to implement greedy algorithm
 - Prove that greedy solution is the optimal solution of a problem
 
-*Warning: Not all of the problems are greedy problems or should be solved using greedy algorithm.*
+*Warning: Not all of the problems are greedy problems or should be solved using greedy algorithm. Aka don't be greedy with greedy.*
 
-## Ben's Barn
 
-Farmer Ben has a barn where his cows live. Cows separated by stalls, and boards are installed in front of stalls as doors.
+## Vicky's Barn
 
-Unfortunately, a nasty storm destroyed all the doors. Farmer Ben must quickly erect new boards in front of stalls. His new lumber supplier will supply him boards of any length he wishes, but the supplier can only deliver a certain number of boards. Farmer Ben wishes to minimize the total length of the boards he must purchase i.e. minimize the total number of stalls he has to cover.
+Farmer Vicky has a barn where her cows live. Cows separated by stalls, and boards are installed in front of stalls as doors.
+
+Unfortunately, in a temper tantrum resulting from a lack of available ketchup for her lettuce, Vicky destroyed all her doors. Farmer Vicky must quickly erect new boards in front of stalls. Her new lumber supplier will supply her boards of any length she wishes, but the supplier can only deliver a certain number of boards. Farmer Vicky wishes to minimize the total length of the boards she must purchase i.e. minimize the total number of stalls she has to cover.
 
 Given `int M`, the maximum number of boards that can be purchased, `int[] occupied` containing all the occupied stall numbers (1 <= stall_number <= S), calculate the **minimum number of stalls** that must be blocked in order to block all the stalls that have cows in them.
 
 ### Example
 
-![](./cows.jpg)
+![Cows](cows.jpg)
 
-*Note: Farmer Ben refused to be photographed for this example problem. The
+*Note: Farmer Vicky refused to be photographed for this example problem. The
 cows however, did not mind.*
 
 Given `M = 2, occupied = {1, 2, 4, 5, 6, 12}`:
 
-Return 7: Ben has to cover stalls numbered 1-6, and 12.
+Return 7: Vicky has to cover stalls numbered 1-6, and 12.
 
 Return the total number of stalls blocked.
 
 ## Minimum Cost Connecting Road
 
-Urban planner David is designing roads for a new town. There are multiple important locations in town such as schools, shops, restaurants, etc... David needs to plan roads that connect all these locations together. There is a cost to build between two certain locations, and David's design should minimize the cost.
+Urban planner Nathan is designing roads for a new town. There are multiple important locations in town such as schools, shops, restaurants, etc... Nathan needs to plan roads that connect all these locations together. There is a cost to build between two certain locations, and Nathan's design should minimize the cost. Naturally, Nathan is having a lot of difficulty with this because he hails from a fake college with only five buildings.
 
-<p align="center">
+![](mst_opt.jpg)  
+<!-- <p align="center">
   <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t34.0-12/30421769_1855304341437101_1642452094_n.png?_nc_cat=0&oh=d77cfa45e8d2e352435c6c7b0bae06fd&oe=5AD4A6D7" width="350"/>
-</p>
+</p> -->
 *Note: Green dots are locations, and the price of building a road between two locations is indicated as integers. In this case, the optimal road is marked by thickened lines.*
 
 A map of the town is represented by a `EdgeWeightedGraph` G.
@@ -57,8 +59,7 @@ This graph contains information of vertices and edges. A `Edge` class is also cr
 
 Your solution will return the minimum cost of the road. In the example, the minimum cost of 1+4+3 = 8.
 
-<details> <summary>Hint 1</summary> Hint: Your designed road should have not cycles to ensure minimum cost </details>
-<details> <summary>Hint 2</summary> Hint: This problem is also known as the minimum spanning tree. DSA favorite Erik Demaine covers Prim's algorithm, which is one solution to the problem: https://youtu.be/tKwnms5iRBU?t=42m14s </details>
+This question has [hints](https://github.com/Olin-DSA/DSA-19/blob/master/greedy/hints.md)!
 
 ### In addition...
 When you are writing the solution, you might find the `IndexPQ` data structure useful. `IndexPQ` is essentially a priority queue where you can change the key of object in the queue. This is the data-structure you would use when implementing Dijkstra's algorithm.
@@ -71,11 +72,18 @@ When you are writing the solution, you might find the `IndexPQ` data structure u
 
 ## First Version with Failure
 
-Product Manager Nick has just switched teams at his company. He discovers to his dismay that his new team's product fails a quality check. The team has been using a version control system where they label versions in a consecutive fashion, `[1, 2, ... , n]`, and perform a quality check at each version. Because versions are developed one after another, if version `j` fails the check, version `j+1` must also fail the check, if it exists.
+Product Manager Nick has just switched teams at his company. He discovers to his dismay that his new team doesn't offer complementary protein shakes and, less importantly, that their product fails a quality check. The team has been using a version control system where they label versions in a consecutive fashion, `[1, 2, ... , n]`, and perform a quality check at each version. Because versions are developed one after another, if version `j` fails the check, version `j+1` must also fail the check, if it exists.
 
 The team has an API `IsFailingVersion`, which will tell you if a given version number fails the quality check. For example, if given `IsFailingVersion version`, then `version.isFailingVersion(j)` will tell you if j is failing.  
 
-
 Write a function to help PM Nick find the *first* failing version number. You can assume version numbering started at `1`, and that the newest version is labeled `n`.( `n` may be quite large, and is represented by a `long`. The max value of an `int` is lower than that of a `long`.)
 
-<details> <summary>Hint 1</summary> Hint: if you code up your solution and the test cases are taking too long to run, think about how you can optimize your code to improve its runtime </details>
+This question has a [hint](https://github.com/Olin-DSA/DSA-19/blob/master/greedy/hints.md)!
+
+## Submitting the assignment
+
+To get credit when you are done:
+
+- Go to NINJA hours to get checked off
+- Submit [this](https://forms.gle/AmHG8c34SfhZru4u6) survey
+- Get Vicky some ketchup and give Nick a protein shake
