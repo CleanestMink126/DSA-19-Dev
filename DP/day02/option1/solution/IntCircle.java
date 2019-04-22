@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class BalloonCircle{
+public class IntCircle{
     public static int maxValue(int[] circle) {
         int[][] DP = new int[circle.length+1][circle.length+1];
         for(int length = 3; length <= circle.length;length+=3){
@@ -45,50 +45,11 @@ public class BalloonCircle{
             if(DP[i][circle.length] > max){
                 max = DP[i][circle.length];
             }
-            System.out.println(Arrays.toString(DP[i]));
+//            System.out.println(Arrays.toString(DP[i]));
         }
 
 
         return max;
-    }
-
-
-    public static void main(String[] args){
-//        int[] arr = new int[]{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
-//        System.out.println(maxValue(arr));
-//        arr = new int[]{1,2,3,4,5,6};
-//        System.out.println(maxValue(arr));
-//        arr = new int[]{2,4,6,8,9,4,400,2,4,24,67,2,3,34,100};
-//        System.out.println(maxValue(arr));
-//        arr = new int[]{2,4,6,8,9,6,4,2,4,24,67,2,3,34,100};
-//        System.out.println(maxValue(arr));
-        int[] arr = new int[]{342, 136, 255, 461, 154, 243};
-        System.out.println(maxValue(arr));
-        System.out.println(29405886);
-        arr = new int[]{98, 293, 353,  92, 474, 471, 293, 243, 403,  75, 179,  36, 359, 220, 270};
-        System.out.println(maxValue(arr));
-        System.out.println(124925525);
-
-
-        arr = new int[]{98, 293, 353,  92, 474, 471, 293, 243, 403,  75, 179,  36, 359, 220, 270};
-        System.out.println(maxValue(arr));
-        System.out.println(124925525);
-
-
-        arr = new int[]{475, 388, 387,  67, 343, 225, 241, 375, 302, 190,  84, 322, 226, 238, 187, 153,  86, 289};
-        System.out.println(maxValue(arr));
-        System.out.println(135643782);
-
-        arr = new int[]{453, 107, 109, 161, 246, 344, 404,  25, 257,  85, 339,  87, 290, 486, 307, 466,  88, 465,
-                332, 348, 489};
-        System.out.println(maxValue(arr));
-        System.out.println(243039864);
-
-
-
-
-
-
     }
 
 }

@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ec3011e-cbf2-4759-9603-f8e37bbd6658" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/day02.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/soln/BalloonPopping.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/soln/Regex.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/soln/TextJustification.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/soln/WeightedIntervals.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BalloonPopping.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Regex.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TextJustification.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WeightedIntervals.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/BalloonPoppingTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/JustificationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/RegexTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/WeightedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/option1/solution/BalloonCircle.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,7 +14,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="65" />
     <option name="y" value="-4" />
     <option name="width" value="1855" />
@@ -77,7 +62,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="7" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <layout>
       <window_info id="Designer" />
       <window_info id="UI Designer" />
