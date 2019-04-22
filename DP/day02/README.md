@@ -15,14 +15,15 @@ or
 - The DP implementation PDF we handed out in class today: https://drive.google.com/open?id=156zlHrsjV72xLNYHfVyOoGE99XNZomVu
 
 ## Assignment
-Choose **one** of the three options below. use the corresponding folder to the option you choose.
+Choose **one** of the three options below. use the corresponding folder to the option you choose. Do not expect NINJAs help with your code on options 1 or 3.
+
 #### Option 1: Super Hard Problem --------*Worth 3 Late Days!!!*
 Implement a solution to an interview question a previous instructor was asked that only 1 out of ~80 interviewees was able to get in time. Also, it is not googlable (at least we couldn't find an answer online). Your answer must run in **polynomial** time (n, n^2, n^3 etc.). Not N! or some constant C^N. Bonus points if you come up with a solution different than ours.
 
 Reach out to Nick to get checked off for it.
 
-#### **Option 2: Two decently hard problems**
+#### Option 2: Two decently hard problems
 This is the original option from last year, and the one the NINJAs can help best with. You choose **2** out of 3 hard DP problems to solve. Again, your answers must run in polynomial time (n, n^2, n^3 etc.). Not N! or some constant C^N.
 
-#### **Option 3: Personal Exploration**
+#### Option 3: Personal Exploration
 Look into a topic that we have covered that either you feel hazy about or that you  are interested in looking deeper into. Do some research online and find an interesting problem relating to it. Write an appropriate solution to that problem **and** test cases to test your solution.
