@@ -234,11 +234,35 @@ if "__main__" == __name__:
         #         print(array)
         #         print(answer)
 
-        array = np.random.randint(0,500,21)
-        answer = getBiggestForce(array)
-        print(array)
-        print(answer)
-        # testmyVersion([1,9,3,4,5,8,6,2,13])
+
+        array = np.random.randint(0,100,60)
+        print(','.join(str(e) for e in array))
+        array = np.random.randint(0,50,120)
+        print(','.join(str(e) for e in array))
+        array = np.random.randint(-50,50,30)
+        print(','.join(str(e) for e in array))
+        tot = 1
+        for i in range(3,120,3):
+            tot *= i
+        ips = 1000000 * 133740
+        spy = 60* 60 * 24* 365
+        ageofuniverse = 14000000000
+        numcomputers = 3000000000
+        numplanets = 1000000000000000000000
+        print(((tot/ips)/spy)/ageofuniverse/numcomputers/numplanets)
+        # array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+        # answer = getBiggestForce(array)
+        # print(array)
+        # print(answer)
+        # array = [2,4,6,8,9,4,400,2,4,24,67,2,3,34,100]
+        # answer = getBiggestForce(array)
+        # print(array)
+        # print(answer)
+        # array = [2,4,6,8,9,6,4,2,4,24,67,2,3,34,100]
+        # answer = getBiggestForce(array)
+        # print(array)
+        # print(answer)
+        # # testmyVersion([1,9,3,4,5,8,6,2,13])
         #
         # testmyVersion([1,100,1,6,20,100,100,10,11])
         # array =[10,7,13,7,10,10,7,13,7]
