@@ -2,6 +2,8 @@
 
 You are free to write these solutions in whichever manner you prefer, top-down or bottom-up. Implement at least **two** of the three following problems.
 
+Nothing should take very long to run. Let's say no more than 30 seconds for any of the tests.
+
 ### Text Justification
 
 Given a body of text as an array of strings in order (`w`) and the maximum length (`m`) of a line, return a `List` of the indices of the first word of each line of justified text.  For example:

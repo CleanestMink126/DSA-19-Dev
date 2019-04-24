@@ -15,7 +15,7 @@ public class TextJustification {
         return Math.pow(m-length, 3);
     }
 
-    public static List<Integer> justifyTextBU(String[] w, int m) {
+    public static List<Integer> justifyText(String[] w, int m) {
 
         // Steps 1 and 2. Store a memo keep track of justification costs (DP).
         // Use lineBreaks to store where lines starting at a given index end.

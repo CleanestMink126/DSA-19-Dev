@@ -72,6 +72,7 @@ public class IntCircleTest {
     public void testCircle9() {
         //Verified by our solution
         //If you pass tests 1-8 you can still get checked off
+        //BUT your code can not run forever on any of the assignements
         //It could possibly be an error in our solution
         //This is mostly to make sure your algorithm is polynomial time
         int[] arr = new int[]{91,35,69,87,84,92,86,0,47,70,75,64,71,67,30,61,69,72,24,81,14,16,28,83,98,97,73,61,59,43,44,32,40,16,55,78,19,6,88,2,24,83,64,20,2,5,84,67,95,5,4,68,67,36,95,26,19,67,15,65};
