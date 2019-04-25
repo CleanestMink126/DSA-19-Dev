@@ -1,10 +1,10 @@
 # Dynamic Programming - Day01
 
-**Updated: This assignment is due on Fri, April 27**
+**Updated: This assignment is due on Monday, April 29**
 
 ## Resources
 
-* [Our Lecture Notes](https://docs.google.com/document/d/1CZ7CRMi9gOZcFLU3BD7qCH3LYNZEfqYUXJ_MRjO3Kng/edit?usp=sharing)
+* [Our Slides](https://drive.google.com/open?id=1BtAF6K0lxBfHEukjImDjPdbiwsI1awCXWQ4mTZjxQUA)
 * [MIT Lecture on 2D DP](https://www.youtube.com/watch?v=ocZMDMZwhCY)
 * [MIT Lecture Notes on 2D DP](https://drive.google.com/open?id=1rekTg-6I9wQevEaXTvH5sQympnePc-2h)
 
@@ -14,10 +14,10 @@ Choose one of the problems below to do in the top-down method, one in the bottom
 
 ## Splitting coins
 
-Jingyi has a stack of coins and would like to split them up as evenly as possible with David. She is given a set of `N` coins. Each of these coins has a given value. She must place each of these coins in one of two piles. Output the smallest possible difference between the total values of these two piles. 
+Vicky has a stack of coins and would like to split them up as evenly as possible with Prava. She is given a set of `N` coins. Each of these coins has a given value. She must place each of these coins in one of two piles. Output the smallest possible difference between the total values of these two piles. 
 
 You are given
-* `coins`, an array of all the coins Jingyi must split
+* `coins`, an array of all the coins Vicky must split
 
 You will be filling out the function `public int splitCoins(int[] coins)` in `Coins.java` and run tests in `CoinsTest.java`
 
@@ -69,3 +69,8 @@ map = {{-2, -3, 3}, {-5, -10, 1}, {10, 30, -5}}
 
 minInitialHealth = 7, following the optimal path R -> R -> D -> D
 ```
+
+## Submitting the Assignment
+* Go to NINJA hours to get checked off (on or before Monday, April 29th).
+* Be prepared to explain the runtime and the 5 DP steps for each of the problems you solved.
+* Complete the [survey](https://forms.gle/8srYuVwbZxQbBFPFA).
