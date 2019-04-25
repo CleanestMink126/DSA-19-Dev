@@ -74,4 +74,3 @@ minInitialHealth = 7, following the optimal path R -> R -> D -> D
 * Go to NINJA hours to get checked off (on or before Monday, April 29th).
 * Be prepared to explain the runtime and the 5 DP steps for each of the problems you solved.
 * Complete the [survey](https://forms.gle/8srYuVwbZxQbBFPFA).
-* 
