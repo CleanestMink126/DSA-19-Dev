@@ -22,8 +22,14 @@ Implement a solution to an interview question a previous instructor was asked th
 
 Reach out to Nick to get checked off for it.
 
+[More info here](./option1/option1.md)
+
 #### Option 2: Two decently hard problems
 This is the original option from last year, and the one the NINJAs can help best with. You choose **2** out of 3 hard DP problems to solve. Again, your answers must run in polynomial time (n, n^2, n^3 etc.). Not N! or some constant C^N.
 
+[More info here](./option2/option2.md)
+
 #### Option 3: Personal Exploration
 Look into a topic that we have covered that either you feel hazy about or that you  are interested in looking deeper into. Do some research online and find an interesting problem relating to it. Write an appropriate solution to that problem **and** test cases to test your solution.
+
+[More info here](./option3/option3.md)
