@@ -20,6 +20,6 @@ You can see example games below.
 
 We have [hints!](./hints.md)
 ### Checkoffs
-Reach out to Nick (gsteelman@olin.edu, @steeeeelman on Instagram) to get checked off or if you have questions.
+Reach out to Nick (gsteelman@olin.edu, @steeeeelman on Instagram) (or one of the other instructors) to get checked off or if you have questions.
 
 You can still get checked off if you pass tests 1-8. BUT, your code cannot run forever on any of the tests.
