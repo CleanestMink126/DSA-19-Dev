@@ -12,7 +12,7 @@ or
 
 - Walkthrough of the weighted interval problem from class today: https://www.youtube.com/watch?v=cr6Ip0J9izc
 - Erik Demaine's lecture on text justification: https://youtu.be/ENyox7kNKeY
-- The DP implementation PDF we handed out in class today: https://drive.google.com/open?id=156zlHrsjV72xLNYHfVyOoGE99XNZomVu
+- The DP implementation PDF we handed out at the start of the unit: https://drive.google.com/open?id=156zlHrsjV72xLNYHfVyOoGE99XNZomVu
 
 ## Assignment
 Choose **one** of the three options below. use the corresponding folder to the option you choose. Do not expect NINJAs help with your code on options 1 or 3.
